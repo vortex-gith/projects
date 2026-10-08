@@ -1,0 +1,3 @@
+﻿  Bez_Merzania_AI.cpp
+D:\snakee\Bez_Merzania_AI\Bez_Merzania_AI.cpp(44,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Bez_Merzania_AI.vcxproj -> D:\snakee\x64\Debug\Bez_Merzania_AI.exe

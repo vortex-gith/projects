@@ -1,0 +1,40 @@
+﻿  ParseLogs2.cpp
+E:\проекты\ParseLogs2\ParseLogs2\LogGenerator.hpp(47,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  (компиляция исходного файла "ParseLogs2.cpp")
+  
+E:\проекты\ParseLogs2\ParseLogs2\ParseLogs2.cpp(59,28): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+E:\проекты\ParseLogs2\ParseLogs2\ParseLogs2.cpp(41,35): warning C4101: error: неиспользованная локальная переменная
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(1686,77): warning C4244: аргумент: преобразование "unsigned __int64" в "int", возможна потеря данных
+  (компиляция исходного файла "ParseLogs2.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\type_traits(1686,77):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          E:\проекты\ParseLogs2\ParseLogs2\ParseLogs2.cpp(65,25):
+          выполняется компиляция ссылки на экземпляр шаблон функции "std::thread::thread<void(__cdecl LogGenerator::* )(int,SafeBuffer &),LogGenerator*,size_t&,std::reference_wrapper<SafeBuffer>,0>(_Fn &&,LogGenerator *&&,size_t &,std::reference_wrapper<SafeBuffer> &&)"
+          with
+          [
+              _Fn=void (__cdecl LogGenerator::* )(int,SafeBuffer &)
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(93,9):
+          выполняется компиляция ссылки на экземпляр шаблон функции "void std::thread::_Start<_Ty,LogGenerator*,size_t&,std::reference_wrapper<SafeBuffer>>(_Fn &&,LogGenerator *&&,size_t &,std::reference_wrapper<SafeBuffer> &&)"
+          with
+          [
+              _Ty=void (__cdecl LogGenerator::* )(int,SafeBuffer &),
+              _Fn=void (__cdecl LogGenerator::* )(int,SafeBuffer &)
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(76,40):
+          выполняется компиляция ссылки на экземпляр шаблон функции "unsigned int (__cdecl *std::thread::_Get_invoke<std::thread::_Start::_Tuple,0,1,2,3>(std::integer_sequence<size_t,0,1,2,3>) noexcept)(void *) noexcept"
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(67,17):
+          выполняется компиляция ссылки на экземпляр шаблон функции "unsigned int std::thread::_Invoke<std::thread::_Start::_Tuple,0,1,2,3>(void *) noexcept"
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(60,14):
+          выполняется компиляция ссылки на экземпляр шаблон функции "void std::invoke<void(__cdecl LogGenerator::* )(int,SafeBuffer &),LogGenerator*,unsigned __int64,std::reference_wrapper<SafeBuffer>>(_Callable &&,_Ty1 &&,unsigned __int64 &&,std::reference_wrapper<SafeBuffer> &&) noexcept(false)"
+          with
+          [
+              _Callable=void (__cdecl LogGenerator::* )(int,SafeBuffer &),
+              _Ty1=LogGenerator *
+          ]
+  
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 1014 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  ParseLogs2.vcxproj -> E:\проекты\ParseLogs2\x64\Release\ParseLogs2.exe

@@ -1,0 +1,3 @@
+﻿  Tetris.cpp
+H:\Мокрушин Святослав\ОАП\Tetris\Tetris\Tetris\Tetris.cpp(268,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Tetris.vcxproj -> H:\Мокрушин Святослав\ОАП\Tetris\Tetris\x64\Debug\Tetris.exe

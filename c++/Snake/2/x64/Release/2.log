@@ -1,0 +1,7 @@
+﻿  2.cpp
+D:\Snake\2\2.cpp(160,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 196 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  2.vcxproj -> D:\Snake\x64\Release\SNAKE.exe

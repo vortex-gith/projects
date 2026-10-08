@@ -1,0 +1,51 @@
+﻿  Работа с множеством потоков.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(96,19): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(140,18): error C3083: filesystem: символ слева от "::" должен представлять тип
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(140,30): error C2039: "exists": не является членом "std".
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\iomanip(22,1):
+       см. объявление "std"
+  
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(140,30): error C3861: exists: идентификатор не найден
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(142,37): error C2065: outLogs: необъявленный идентификатор
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(185,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(211,26): error C2661: std::thread::thread: нет перегруженной функции, принимающей 6 аргументов
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(92,28):
+      может быть "std::thread::thread(_Fn &&,_Args ...)"
+          E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(211,26):
+          "std::thread::thread(_Fn &&,_Args ...)": не удается вывести аргумент шаблон для "__formal"
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(91,42):
+              "std::enable_if_t<false,int>": не удалось специализировать шаблон псевдонима
+      E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(211,26):
+      при попытке сопоставить список аргументов "(std::thread, __int64, std::vector<std::string,std::allocator<std::string>>, std::vector<std::string,std::allocator<std::string>>, std::vector<std::string,std::allocator<std::string>>, std::vector<std::string,std::allocator<std::string>>)"
+  
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(212,37): error C2661: std::thread::thread: нет перегруженной функции, принимающей 2 аргументов
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(92,28):
+      может быть "std::thread::thread(_Fn &&,_Args ...)"
+          E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(212,37):
+          "std::thread::thread(_Fn &&,_Args ...)": не удается вывести аргумент шаблон для "__formal"
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(91,42):
+              "std::enable_if_t<false,int>": не удалось специализировать шаблон псевдонима
+      E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(212,37):
+      при попытке сопоставить список аргументов "(std::thread, std::vector<std::string,std::allocator<std::string>>)"
+  
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(213,26): error C2661: std::thread::thread: нет перегруженной функции, принимающей 2 аргументов
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(92,28):
+      может быть "std::thread::thread(_Fn &&,_Args ...)"
+          E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(213,26):
+          "std::thread::thread(_Fn &&,_Args ...)": не удается вывести аргумент шаблон для "__formal"
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(91,42):
+              "std::enable_if_t<false,int>": не удалось специализировать шаблон псевдонима
+      E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(213,26):
+      при попытке сопоставить список аргументов "(std::thread, std::vector<std::string,std::allocator<std::string>>)"
+  
+E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(214,31): error C2661: std::thread::thread: нет перегруженной функции, принимающей 2 аргументов
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(92,28):
+      может быть "std::thread::thread(_Fn &&,_Args ...)"
+          E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(214,31):
+          "std::thread::thread(_Fn &&,_Args ...)": не удается вывести аргумент шаблон для "__formal"
+              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(91,42):
+              "std::enable_if_t<false,int>": не удалось специализировать шаблон псевдонима
+      E:\проекты\ParserLog2.0\Работа с множеством потоков\Работа с множеством потоков\Работа с множеством потоков.cpp(214,31):
+      при попытке сопоставить список аргументов "(std::thread, std::vector<std::string,std::allocator<std::string>>)"
+  

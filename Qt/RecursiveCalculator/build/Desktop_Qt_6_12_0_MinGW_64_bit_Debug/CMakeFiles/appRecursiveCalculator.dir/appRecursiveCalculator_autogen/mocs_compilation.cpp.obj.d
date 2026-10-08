@@ -1,0 +1,2 @@
+CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj: \
+ C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\appRecursiveCalculator_autogen\mocs_compilation.cpp

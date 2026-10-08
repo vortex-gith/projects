@@ -1,0 +1,4 @@
+﻿  Calculator.modified.cpp
+D:\Calculator\Calculator.modified\Calculator.modified.cpp(71,1): warning C4715: parseThird: значение возвращается не при всех путях выполнения
+D:\Calculator\Calculator.modified\Calculator.modified.cpp(33,1): warning C4715: parseNumbers: значение возвращается не при всех путях выполнения
+  Calculator.modified.vcxproj -> D:\Calculator\x64\Debug\Calculator.modified.exe

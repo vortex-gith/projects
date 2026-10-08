@@ -1,0 +1,6 @@
+--interactive
+--resource
+C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qmake_RecursiveCalculator.qrc
+--resource
+C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/appRecursiveCalculator_raw_qml_0.qrc
+C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/appRecursiveCalculator.exe

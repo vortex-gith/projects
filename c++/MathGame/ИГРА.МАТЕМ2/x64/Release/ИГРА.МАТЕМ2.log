@@ -1,0 +1,11 @@
+﻿  ИГРА.МАТЕМ2.cpp
+D:\ИГРА.МАТЕМ\ИГРА.МАТЕМ2\ИГРА.МАТЕМ2.cpp(30,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ИГРА.МАТЕМ\ИГРА.МАТЕМ2\ИГРА.МАТЕМ2.cpp(168,34): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
+D:\ИГРА.МАТЕМ\ИГРА.МАТЕМ2\ИГРА.МАТЕМ2.cpp(177,33): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
+D:\ИГРА.МАТЕМ\ИГРА.МАТЕМ2\ИГРА.МАТЕМ2.cpp(180,30): warning C4244: аргумент: преобразование "const int" в "float", возможна потеря данных
+  Создание кода
+  0 of 162 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  ИГРА.МАТЕМ2.vcxproj -> D:\ИГРА.МАТЕМ\x64\Release\ИГРА.МАТЕМ2.exe

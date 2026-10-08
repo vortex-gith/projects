@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/RecursiveCalculator">
+    <file alias="qmldir">C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/RecursiveCalculator/qmldir</file>
+  </qresource>
+</RCC>
+

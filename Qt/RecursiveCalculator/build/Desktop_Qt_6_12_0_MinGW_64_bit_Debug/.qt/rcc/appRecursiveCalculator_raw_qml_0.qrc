@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/RecursiveCalculator/">
+    <file alias="Main.qml">C:/projects/Qt/RecursiveCalculator/Main.qml</file>
+  </qresource>
+</RCC>
+

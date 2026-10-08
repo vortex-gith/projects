@@ -1,0 +1,3 @@
+﻿  IgraSPotokami.cpp
+D:\ParserLog\IgraSPotokami\IgraSPotokami.cpp(6,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  IgraSPotokami.vcxproj -> D:\ParserLog\x64\Debug\IgraSPotokami.exe
