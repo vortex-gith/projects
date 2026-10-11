@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Qt\Tools\CMake_64\bin\cmake.exe
+CMAKE_COMMAND = D:\QT\Tools\CMake_64\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
+RM = D:\QT\Tools\CMake_64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\projects\Qt\RecursiveCalculator
+CMAKE_SOURCE_DIR = D:\flash\projects\Qt\RecursiveCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
+CMAKE_BINARY_DIR = D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 
 # Utility rule file for generate_finalqtconf_appRecursiveCalculator.
 
@@ -68,14 +68,14 @@ include CMakeFiles/generate_finalqtconf_appRecursiveCalculator.dir/progress.make
 CMakeFiles/generate_finalqtconf_appRecursiveCalculator: .qt/qtconf_list.done
 
 .qt/qtconf_list.done: .qt/qtconfs/appRecursiveCalculator_qt.part.conf
-.qt/qtconf_list.done: C:/Qt/6.12.0/mingw_64/bin/qmltyperegistrar.exe
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qt.conf file"
-	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmltyperegistrar.exe --merge-qt-conf C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qtconf_list --merge-qt-conf-merged-paths C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qtconf_path_list
+.qt/qtconf_list.done: D:/QT/6.12.0/mingw_64/bin/qmltyperegistrar.exe
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qt.conf file"
+	call .qt\bin\qt_setup_tool_path.bat D:/QT/6.12.0/mingw_64/bin/qmltyperegistrar.exe --merge-qt-conf D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qtconf_list --merge-qt-conf-merged-paths D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qtconf_path_list
 
 .qt/qtconfs/appRecursiveCalculator_qt.part.conf: .qt/qml_imports/appRecursiveCalculator_build.cmake
-.qt/qtconfs/appRecursiveCalculator_qt.part.conf: C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6WriteQtConfPart.cmake
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qt.conf part for appRecursiveCalculator"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -DIMPORTS_FILE=C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qml_imports/appRecursiveCalculator_build.cmake -DOUTPUT_FILE=C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qtconfs/appRecursiveCalculator_qt.part.conf -DEXPORT_NAMESPACE=Qt6 -DEXTRA_IMPORT_ROOTS=C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug -DQT_IMPORT_PATHS=C:/Qt/6.12.0/mingw_64/qml -P C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6WriteQtConfPart.cmake
+.qt/qtconfs/appRecursiveCalculator_qt.part.conf: D:/QT/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6WriteQtConfPart.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qt.conf part for appRecursiveCalculator"
+	D:\QT\Tools\CMake_64\bin\cmake.exe -DIMPORTS_FILE=D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qml_imports/appRecursiveCalculator_build.cmake -DOUTPUT_FILE=D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qtconfs/appRecursiveCalculator_qt.part.conf -DEXPORT_NAMESPACE=Qt6 -DEXTRA_IMPORT_ROOTS=D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug -DQT_IMPORT_PATHS=D:/QT/6.12.0/mingw_64/qml -P D:/QT/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6WriteQtConfPart.cmake
 
 generate_finalqtconf_appRecursiveCalculator: .qt/qtconf_list.done
 generate_finalqtconf_appRecursiveCalculator: .qt/qtconfs/appRecursiveCalculator_qt.part.conf
@@ -92,6 +92,6 @@ CMakeFiles/generate_finalqtconf_appRecursiveCalculator.dir/clean:
 .PHONY : CMakeFiles/generate_finalqtconf_appRecursiveCalculator.dir/clean
 
 CMakeFiles/generate_finalqtconf_appRecursiveCalculator.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\generate_finalqtconf_appRecursiveCalculator.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\generate_finalqtconf_appRecursiveCalculator.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/generate_finalqtconf_appRecursiveCalculator.dir/depend
 

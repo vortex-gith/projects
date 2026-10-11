@@ -1,90 +1,157 @@
 import QtQuick
+import QtQuick.Controls
 import QtQuick.Layouts
-import QtQuick.Controls.Basic
-
+import RecursiveCalculator
 
 ApplicationWindow {
-    id: window
-    width: 640
-    height: 480
-    minimumWidth: 200
-    minimumHeight: 250
+    width: 400
+    height: 500
+    minimumWidth: 400
+    minimumHeight: 500
     visible: true
-    title: qsTr("Hello World")
-    property bool lightMode: Application.styleHints.colorScheme === Qt.Light
-    property color reallyDark: "#1f1f1f"
-    property color dark: "#262626"
-    property color reallyLight: "#e7e7e7"
-    property color light: "#e0e0e0"
+    title: "Академический калькулятор"
+    color: "#F3F4F6"
 
-    GridLayout {
-        id: grid
-        columns: width < 400 ? 1 : 2
-        rowSpacing: 0
-        columnSpacing: 0
-        anchors.fill: parent
-
-        Rectangle {
-            id: rectangle1
-            color: window.lightMode ? window.reallyLight : window.reallyDark
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            ColumnLayout {
-                anchors.fill: parent
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-
-                Label {
-                    id: text1
-                    color: window.lightMode ? window.dark : window.light
-                    font.pixelSize: 120
-                    fontSizeMode: Text.Fit
-                    text: qsTr("Hello World")
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    Layout.margins: 16
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-            }
-        }
-
-        Rectangle {
-            id: rectangle2
-            color: window.lightMode ? window.light : window.dark
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-
-            ColumnLayout {
-                anchors.fill: parent
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-
-                Button {
-                    id: button1
-                    text: window.lightMode ? qsTr("\u263D  Dark mode")
-                                           : qsTr("\u263C  Light mode")
-                    Layout.bottomMargin: 16
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-
-                    contentItem: Text {
-                        text: button1.text
-                        color: window.lightMode ? window.light : window.dark
-                        font: button1.font
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                    }
-
-                    background: Rectangle {
-                        implicitWidth: 120
-                        implicitHeight: 36
-                        radius: 8
-                        color: window.lightMode ? window.dark : window.light
-                    }
-
-                    onClicked: window.lightMode = !window.lightMode
-                }
-            }
-        }
+    Calculator
+    {
+        id: backendCalc
     }
 
+    Rectangle
+    {
+        anchors.fill: parent
+        anchors.margins: 20
+        color: "#FFFFFF"
+        radius: 20
+        border.color: "#E5E7EB"
+        border.width: 1
+
+        ColumnLayout
+        {
+            anchors.fill: parent
+            anchors.margins: 25
+            spacing: 20
+
+            TextArea
+            {
+                id: inputField
+                placeholderText: "Например: 2 + 2 * sin(pi)"
+                font.pixelSize: 18
+                color: "#1F2937"
+                wrapMode: Text.Wrap
+
+                Layout.fillWidth: true
+                Layout.preferredHeight: Math.min(Math.max(55, contentHeight + 20), 220)
+
+                Behavior on Layout.preferredHeight
+                {
+                    NumberAnimation { duration: 120 }
+                }
+
+                background: Rectangle
+                {
+                    color: "#F9FAFB"
+                    radius: 12
+                    border.color: inputField.activeFocus ? "#3B82F6" : "#D1D5DB"
+                    border.width: inputField.activeFocus ? 2 : 1
+                    Behavior on border.color { ColorAnimation { duration: 150 } }
+                }
+
+                Keys.onPressed: (event) =>
+                {
+                    if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                        calculateButton.clicked();
+                        event.accepted = true;
+                    }
+                }
+            }
+
+            Rectangle
+            {
+                Layout.fillWidth: true
+                Layout.preferredHeight: 55
+                color: "#FFFFFF"
+                radius: 12
+                border.color: "#E5E7EB"
+                border.width: 1
+
+                Text
+                {
+                    id: outputField
+                    text: ""
+                    font.pixelSize: 22
+                    font.bold: true
+                    color: "#111827"
+                    anchors.fill: parent
+                    anchors.margins: 10
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+
+                    // чтобы длинные ответы или ошибки умещались визуально
+                    fontSizeMode: Text.Fit
+                    minimumPixelSize: 12
+                }
+            }
+
+            // невидимая пружина которая занимает всё оставшееся пустое место
+            // и выталкивает кнопку "Посчитать" в самый низ окна
+            Item
+            {
+                Layout.fillHeight: true
+            }
+
+            Item
+                        {
+                            id: calculateButton
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 55
+
+                            // Пробрасываем сигнал клика для совместимости с кодом выше
+                            signal clicked()
+
+                            // Создаем собственные свойства hovered и down на основе мыши
+                            readonly property bool hovered: mouseArea.containsMouse
+                            readonly property bool down: mouseArea.pressed
+
+                            Rectangle
+                            {
+                                anchors.fill: parent
+                                radius: 12
+
+                                // Ваша палитра цветов теперь гарантированно сработает без белой пелены!
+                                color: calculateButton.down ? "#1e2947" : (calculateButton.hovered ? "#2e3a65" : "#455076")
+
+                                Behavior on color { ColorAnimation { duration: 120 } }
+
+                                Text
+                                {
+                                    text: "Посчитать"
+                                    font.pixelSize: 18
+                                    font.bold: true
+                                    color: "#FFFFFF"
+                                    anchors.centerIn: parent
+                                }
+                            }
+
+                            MouseArea
+                            {
+                                id: mouseArea
+                                anchors.fill: parent
+                                hoverEnabled: true // Включает отслеживание наведения мыши
+
+                                // Перенаправляем клик мыши в сигнал кнопки
+                                onClicked: calculateButton.clicked()
+                            }
+
+                            // Обработчик сигнала клика (вызывается и мышкой, и через Enter из TextArea)
+                            onClicked:
+                            {
+                                if (inputField.text !== "")
+                                {
+                                    outputField.text = backendCalc.calculate(inputField.text);
+                                }
+                            }
+                        }
+        }
+    }
 }
