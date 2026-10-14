@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\QT\Tools\CMake_64\bin\cmake.exe
+CMAKE_COMMAND = C:\Qt\Tools\CMake_64\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\QT\Tools\CMake_64\bin\cmake.exe -E rm -f
+RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\flash\projects\Qt\RecursiveCalculator
+CMAKE_SOURCE_DIR = C:\projects\Qt\RecursiveCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
+CMAKE_BINARY_DIR = C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 
 # Utility rule file for all_qmllint.
 
@@ -77,6 +77,6 @@ CMakeFiles/all_qmllint.dir/clean:
 .PHONY : CMakeFiles/all_qmllint.dir/clean
 
 CMakeFiles/all_qmllint.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\all_qmllint.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\all_qmllint.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/all_qmllint.dir/depend
 

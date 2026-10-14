@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\QT\Tools\CMake_64\bin\cmake.exe
+CMAKE_COMMAND = C:\Qt\Tools\CMake_64\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\QT\Tools\CMake_64\bin\cmake.exe -E rm -f
+RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\flash\projects\Qt\RecursiveCalculator
+CMAKE_SOURCE_DIR = C:\projects\Qt\RecursiveCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
+CMAKE_BINARY_DIR = C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 
 # Utility rule file for appRecursiveCalculator_qmlimportscan.
 
@@ -67,12 +67,12 @@ include CMakeFiles/appRecursiveCalculator_qmlimportscan.dir/progress.make
 
 CMakeFiles/appRecursiveCalculator_qmlimportscan: .qt/qml_imports/appRecursiveCalculator_build.cmake
 
-.qt/qml_imports/appRecursiveCalculator_build.cmake: D:/QT/6.12.0/mingw_64/bin/qmlimportscanner.exe
+.qt/qml_imports/appRecursiveCalculator_build.cmake: C:/Qt/6.12.0/mingw_64/bin/qmlimportscanner.exe
 .qt/qml_imports/appRecursiveCalculator_build.cmake: .qt/rcc/qmake_RecursiveCalculator.qrc
 .qt/qml_imports/appRecursiveCalculator_build.cmake: .qt/rcc/appRecursiveCalculator_raw_qml_0.qrc
-.qt/qml_imports/appRecursiveCalculator_build.cmake: D:/flash/projects/Qt/RecursiveCalculator/Main.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for appRecursiveCalculator"
-	cd /d D:\flash\projects\Qt\RecursiveCalculator && call D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\bin\qt_setup_tool_path.bat D:/QT/6.12.0/mingw_64/bin/qmlimportscanner.exe @D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qml_imports/appRecursiveCalculator_build.rsp
+.qt/qml_imports/appRecursiveCalculator_build.cmake: C:/projects/Qt/RecursiveCalculator/Main.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for appRecursiveCalculator"
+	cd /d C:\projects\Qt\RecursiveCalculator && call C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmlimportscanner.exe @C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qml_imports/appRecursiveCalculator_build.rsp
 
 appRecursiveCalculator_qmlimportscan: .qt/qml_imports/appRecursiveCalculator_build.cmake
 appRecursiveCalculator_qmlimportscan: CMakeFiles/appRecursiveCalculator_qmlimportscan
@@ -88,6 +88,6 @@ CMakeFiles/appRecursiveCalculator_qmlimportscan.dir/clean:
 .PHONY : CMakeFiles/appRecursiveCalculator_qmlimportscan.dir/clean
 
 CMakeFiles/appRecursiveCalculator_qmlimportscan.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\appRecursiveCalculator_qmlimportscan.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\appRecursiveCalculator_qmlimportscan.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/appRecursiveCalculator_qmlimportscan.dir/depend
 

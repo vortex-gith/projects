@@ -54,12 +54,12 @@
                             "message": "Cannot access value for name inputField"
                         },
                         {
-                            "codegenResult": 0,
+                            "codegenResult": 2,
                             "column": 33,
                             "durationMicroseconds": 0,
                             "functionName": "onPressed",
                             "line": 60,
-                            "message": ""
+                            "message": "Cannot access value for name calculateButton"
                         },
                         {
                             "codegenResult": 0,
@@ -102,71 +102,23 @@
                             "message": ""
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 61,
+                            "codegenResult": 2,
+                            "column": 28,
                             "durationMicroseconds": 0,
-                            "functionName": "hovered",
-                            "line": 113,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 58,
-                            "durationMicroseconds": 0,
-                            "functionName": "down",
-                            "line": 114,
-                            "message": ""
+                            "functionName": "model",
+                            "line": 109,
+                            "message": "Could not find property \"model\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 29,
+                            "column": 39,
                             "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 148,
-                            "message": "Cannot retrieve a non-object type by ID: inputField"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 122,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 47,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 118,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 55,
-                            "durationMicroseconds": 0,
-                            "functionName": "centerIn",
-                            "line": 132,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 143,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 47,
-                            "durationMicroseconds": 0,
-                            "functionName": "fill",
-                            "line": 139,
-                            "message": ""
+                            "functionName": "currentIndex",
+                            "line": 126,
+                            "message": "Cannot retrieve a non-object type by ID: modeSelector"
                         }
                     ],
-                    "filePath": "D:/flash/projects/Qt/RecursiveCalculator/Main.qml"
+                    "filePath": "C:/projects/Qt/RecursiveCalculator/Main.qml"
                 }
             ],
             "moduleId": "RecursiveCalculator(appRecursiveCalculator)"
