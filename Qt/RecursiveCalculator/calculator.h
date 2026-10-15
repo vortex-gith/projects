@@ -212,6 +212,7 @@ class Calculator: public QObject
             try
             {
                 pos = 0;
+                if(expression.isEmpty()) { throw std::invalid_argument(""); }
                 this->expression = expression.toStdString();
                 answer = parseFirst();
                 formated();
