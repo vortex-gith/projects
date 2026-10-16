@@ -529,6 +529,30 @@ build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\appRecursiveCalculator.dir\build.make CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.s
 .PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.s
 
+build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.obj: build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.obj
+
+# target to build an object file
+build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appRecursiveCalculator.dir\build.make CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj
+.PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj
+
+build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.i: build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.i
+
+# target to preprocess a source file
+build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appRecursiveCalculator.dir\build.make CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.i
+
+build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.s: build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.s
+
+# target to generate assembly for a file
+build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\appRecursiveCalculator.dir\build.make CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.s
+
 build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.obj: build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj
 .PHONY : build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.obj
 
@@ -646,6 +670,9 @@ help:
 	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.obj
 	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.i
 	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.s
+	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.obj
+	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.i
+	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.s
 	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.obj
 	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.i
 	@echo ... build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.s

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   ".qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp"
   ".qt/rcc/qrc_qmake_RecursiveCalculator.cpp"
+  ".rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp"
+  ".rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats"
   ".rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp"
   ".rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats"
   ".rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp"
@@ -15,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj.d"
   "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj"
   "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj.d"
+  "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj"
+  "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj.d"
   "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj"
   "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj.d"
   "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj"

@@ -67,6 +67,7 @@ include CMakeFiles/appRecursiveCalculator_qmllint_module.dir/progress.make
 
 CMakeFiles/appRecursiveCalculator_qmllint_module: C:/Qt/6.12.0/mingw_64/bin/qmllint.exe
 CMakeFiles/appRecursiveCalculator_qmllint_module: C:/projects/Qt/RecursiveCalculator/Main.qml
+CMakeFiles/appRecursiveCalculator_qmllint_module: C:/projects/Qt/RecursiveCalculator/ControlButton.qml
 CMakeFiles/appRecursiveCalculator_qmllint_module: .rcc/qmllint/appRecursiveCalculator_module.rsp
 	cd /d C:\projects\Qt\RecursiveCalculator && call C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmllint.exe @C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmllint/appRecursiveCalculator_module.rsp
 

@@ -117,32 +117,46 @@ RecursiveCalculator/appRecursiveCalculator.qmltypes: apprecursivecalculator_qmlt
 .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appRecursiveCalculator_Main_qml.cpp.aotstats
 
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: C:/Qt/6.12.0/mingw_64/bin/qmlcachegen.exe
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: C:/projects/Qt/RecursiveCalculator/ControlButton.qml
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: .qt/rcc/qmake_RecursiveCalculator.qrc
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: .qt/rcc/appRecursiveCalculator_raw_qml_0.qrc
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: RecursiveCalculator/appRecursiveCalculator.qmltypes
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: RecursiveCalculator/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp, .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache
+	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/RecursiveCalculator/ControlButton.qml -I C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug -I C:/Qt/6.12.0/mingw_64/qml -i C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/RecursiveCalculator/qmldir --resource C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qmake_RecursiveCalculator.qrc --resource C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/appRecursiveCalculator_raw_qml_0.qrc --dump-aot-stats --module-id=RecursiveCalculator(appRecursiveCalculator) -o C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp C:/projects/Qt/RecursiveCalculator/ControlButton.qml
+
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp.aotstats
+
 .qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp: C:/projects/Qt/RecursiveCalculator/Main.qml
+.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp: C:/projects/Qt/RecursiveCalculator/ControlButton.qml
 .qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp: .qt/rcc/appRecursiveCalculator_raw_qml_0.qrc
 .qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp: C:/Qt/6.12.0/mingw_64/bin/rcc.exe
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Running rcc for resource appRecursiveCalculator_raw_qml_0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Running rcc for resource appRecursiveCalculator_raw_qml_0"
 	C:\Qt\6.12.0\mingw_64\bin\rcc.exe --output C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp --name appRecursiveCalculator_raw_qml_0 C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/appRecursiveCalculator_raw_qml_0.qrc --no-zstd
 
 appRecursiveCalculator_autogen/timestamp: C:/Qt/6.12.0/mingw_64/bin/moc.exe
 appRecursiveCalculator_autogen/timestamp: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Automatic MOC and UIC for target appRecursiveCalculator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Automatic MOC and UIC for target appRecursiveCalculator"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/appRecursiveCalculator_autogen.dir/AutogenInfo.json Debug
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/appRecursiveCalculator_autogen/timestamp
 
 meta_types/appRecursiveCalculator_json_file_list.txt: C:/Qt/6.12.0/mingw_64/bin/cmake_automoc_parser.exe
 meta_types/appRecursiveCalculator_json_file_list.txt: appRecursiveCalculator_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Running AUTOMOC file extraction for target appRecursiveCalculator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Running AUTOMOC file extraction for target appRecursiveCalculator"
 	C:\Qt\6.12.0\mingw_64\bin\cmake_automoc_parser.exe --cmake-autogen-cache-file C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/appRecursiveCalculator_autogen.dir/ParseCache.txt --cmake-autogen-info-file C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/CMakeFiles/appRecursiveCalculator_autogen.dir/AutogenInfo.json --output-file-path C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/meta_types/appRecursiveCalculator_json_file_list.txt --timestamp-file-path C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/meta_types/appRecursiveCalculator_json_file_list.txt.timestamp --cmake-autogen-include-dir-path C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/appRecursiveCalculator_autogen/include
 
 meta_types/qt6apprecursivecalculator_metatypes.json: meta_types/qt6apprecursivecalculator_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating meta_types/qt6apprecursivecalculator_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating meta_types/qt6apprecursivecalculator_metatypes.json"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E true
 
 CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/flags.make
 CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
 CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj: appRecursiveCalculator_autogen/mocs_compilation.cpp
 CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\appRecursiveCalculator_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\appRecursiveCalculator_autogen\mocs_compilation.cpp.obj -c C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\appRecursiveCalculator_autogen\mocs_compilation.cpp
 
 CMakeFiles/appRecursiveCalculator.dir/appRecursiveCalculator_autogen/mocs_compilation.cpp.i: cmake_force
@@ -157,7 +171,7 @@ CMakeFiles/appRecursiveCalculator.dir/main.cpp.obj: CMakeFiles/appRecursiveCalcu
 CMakeFiles/appRecursiveCalculator.dir/main.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
 CMakeFiles/appRecursiveCalculator.dir/main.cpp.obj: C:/projects/Qt/RecursiveCalculator/main.cpp
 CMakeFiles/appRecursiveCalculator.dir/main.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/main.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRecursiveCalculator.dir/main.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\main.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\main.cpp.obj -c C:\projects\Qt\RecursiveCalculator\main.cpp
 
 CMakeFiles/appRecursiveCalculator.dir/main.cpp.i: cmake_force
@@ -172,7 +186,7 @@ CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistration
 CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistrations.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
 CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistrations.cpp.obj: apprecursivecalculator_qmltyperegistrations.cpp
 CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistrations.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistrations.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistrations.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -MD -MT CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistrations.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\apprecursivecalculator_qmltyperegistrations.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\apprecursivecalculator_qmltyperegistrations.cpp.obj -c C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\apprecursivecalculator_qmltyperegistrations.cpp
 
 CMakeFiles/appRecursiveCalculator.dir/apprecursivecalculator_qmltyperegistrations.cpp.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj: .qt/rcc/qrc_qmake_RecursiveCalculator.cpp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\rcc\qrc_qmake_RecursiveCalculator.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\rcc\qrc_qmake_RecursiveCalculator.cpp.obj -c C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\rcc\qrc_qmake_RecursiveCalculator.cpp
 
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.i: cmake_force
@@ -202,7 +216,7 @@ CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj: .rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_qmlcache_loader.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_qmlcache_loader.cpp.obj -c C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_qmlcache_loader.cpp
 
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.i: cmake_force
@@ -217,7 +231,7 @@ CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_Main_qml.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_Main_qml.cpp.obj -c C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_Main_qml.cpp
 
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.i: cmake_force
@@ -228,11 +242,26 @@ CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_Main_qml.cpp -o CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_Main_qml.cpp.s
 
+CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/flags.make
+CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
+CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp
+CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp.obj -c C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp
+
+CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp > CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp.i
+
+CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp -o CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp.s
+
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/flags.make
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/includes_CXX.rsp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj: .qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj: CMakeFiles/appRecursiveCalculator.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj -MF CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\rcc\qrc_appRecursiveCalculator_raw_qml_0.cpp.obj.d -o CMakeFiles\appRecursiveCalculator.dir\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\rcc\qrc_appRecursiveCalculator_raw_qml_0.cpp.obj -c C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\rcc\qrc_appRecursiveCalculator_raw_qml_0.cpp
 
 CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.i: cmake_force
@@ -251,6 +280,7 @@ appRecursiveCalculator_OBJECTS = \
 "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj" \
 "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj" \
 "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj" \
+"CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj" \
 "CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj"
 
 # External object files for target appRecursiveCalculator
@@ -262,6 +292,7 @@ appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/apprecursiveca
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_qmake_RecursiveCalculator.cpp.obj
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp.obj
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.obj
+appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.obj
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp.obj
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/build.make
 appRecursiveCalculator.exe: C:/Qt/6.12.0/mingw_64/lib/libQt6Quick.a
@@ -275,7 +306,7 @@ appRecursiveCalculator.exe: appRecursiveCalculator.exe.manifest
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/linkLibs.rsp
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/objects1.rsp
 appRecursiveCalculator.exe: CMakeFiles/appRecursiveCalculator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable appRecursiveCalculator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable appRecursiveCalculator.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\appRecursiveCalculator.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -288,6 +319,8 @@ CMakeFiles/appRecursiveCalculator.dir/clean:
 
 CMakeFiles/appRecursiveCalculator.dir/depend: .qt/rcc/qrc_appRecursiveCalculator_raw_qml_0.cpp
 CMakeFiles/appRecursiveCalculator.dir/depend: .qt/rcc/qrc_qmake_RecursiveCalculator.cpp
+CMakeFiles/appRecursiveCalculator.dir/depend: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp
+CMakeFiles/appRecursiveCalculator.dir/depend: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats
 CMakeFiles/appRecursiveCalculator.dir/depend: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp
 CMakeFiles/appRecursiveCalculator.dir/depend: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats
 CMakeFiles/appRecursiveCalculator.dir/depend: .rcc/qmlcache/appRecursiveCalculator_qmlcache_loader.cpp

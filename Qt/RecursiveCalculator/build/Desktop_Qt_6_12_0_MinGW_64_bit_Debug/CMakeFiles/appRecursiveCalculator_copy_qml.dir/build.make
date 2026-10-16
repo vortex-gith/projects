@@ -69,6 +69,7 @@ CMakeFiles/appRecursiveCalculator_copy_qml: .qt/appRecursiveCalculator_qml.txt
 
 .qt/appRecursiveCalculator_qml.txt: C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 .qt/appRecursiveCalculator_qml.txt: C:/projects/Qt/RecursiveCalculator/Main.qml
+.qt/appRecursiveCalculator_qml.txt: C:/projects/Qt/RecursiveCalculator/ControlButton.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying appRecursiveCalculator qml sources into build dir"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -DFILES_INFO_PATH=C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/appRecursiveCalculator_qml.cmake -P C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 

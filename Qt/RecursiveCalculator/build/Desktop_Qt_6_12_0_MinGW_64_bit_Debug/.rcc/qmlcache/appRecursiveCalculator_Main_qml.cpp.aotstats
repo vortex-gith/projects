@@ -10,7 +10,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 22,
+                            "line": 24,
                             "message": ""
                         },
                         {
@@ -18,47 +18,39 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 31,
+                            "line": 33,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 27,
+                            "column": 31,
                             "durationMicroseconds": 0,
-                            "functionName": "wrapMode",
-                            "line": 40,
-                            "message": "Could not find property \"wrapMode\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 38,
-                            "durationMicroseconds": 0,
-                            "functionName": "horizontalAlignment",
-                            "line": 42,
-                            "message": "Could not find property \"horizontalAlignment\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 36,
-                            "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
+                            "functionName": "contentWidth",
                             "line": 43,
-                            "message": "Could not find property \"verticalAlignment\"."
+                            "message": "Could not find property \"contentWidth\"."
                         },
                         {
                             "codegenResult": 2,
                             "column": 41,
                             "durationMicroseconds": 0,
                             "functionName": "preferredHeight",
-                            "line": 46,
-                            "message": "Cannot access value for name contentHeight"
+                            "line": 41,
+                            "message": "Cannot retrieve a non-object type by ID: inputField"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 46,
+                            "durationMicroseconds": 0,
+                            "functionName": "policy",
+                            "line": 42,
+                            "message": "Could not find property \"policy\"."
                         },
                         {
                             "codegenResult": 2,
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 57,
+                            "line": 49,
                             "message": "Cannot access value for name inputField"
                         },
                         {
@@ -66,55 +58,143 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 58,
+                            "line": 50,
                             "message": "Cannot access value for name inputField"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 33,
+                            "column": 31,
                             "durationMicroseconds": 0,
-                            "functionName": "onPressed",
-                            "line": 62,
-                            "message": "Cannot retrieve a non-object type by ID: calculateButton"
+                            "functionName": "wrapMode",
+                            "line": 64,
+                            "message": "Could not find property \"wrapMode\"."
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 33,
-                            "durationMicroseconds": 0,
-                            "functionName": "onPressed",
-                            "line": 62,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
+                            "codegenResult": 2,
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 91,
-                            "message": ""
+                            "line": 66,
+                            "message": "Could not find property \"horizontalAlignment\"."
                         },
                         {
-                            "codegenResult": 0,
+                            "codegenResult": 2,
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 92,
+                            "line": 67,
+                            "message": "Could not find property \"verticalAlignment\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 28,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 68,
+                            "message": "Could not find property \"width\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "pixelSize",
+                            "line": 62,
+                            "message": "Could not find property \"pixelSize\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "onPressed",
+                            "line": 71,
+                            "message": "Type  does not have a property clicked for calling"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "onPressed",
+                            "line": 71,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 29,
+                            "durationMicroseconds": 0,
+                            "functionName": "policy",
+                            "line": 85,
+                            "message": "Could not find property \"policy\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "top",
+                            "line": 87,
+                            "message": "Could not find property \"top\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 37,
+                            "durationMicroseconds": 0,
+                            "functionName": "bottom",
+                            "line": 88,
+                            "message": "Could not find property \"bottom\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 89,
+                            "message": "Could not find property \"right\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 98,
+                            "message": "Cannot access value for name vsbar"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 34,
+                            "durationMicroseconds": 0,
+                            "functionName": "opacity",
+                            "line": 100,
+                            "message": "Cannot access value for name vsbar"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "horizontalAlignment",
+                            "line": 125,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 35,
+                            "column": 41,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 126,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "fontSizeMode",
-                            "line": 95,
+                            "line": 128,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 35,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 89,
+                            "line": 123,
                             "message": ""
                         },
                         {
@@ -122,7 +202,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "model",
-                            "line": 113,
+                            "line": 143,
                             "message": "Could not find property \"model\"."
                         },
                         {
@@ -130,180 +210,124 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "currentIndex",
-                            "line": 131,
+                            "line": 161,
                             "message": "Cannot retrieve a non-object type by ID: modeSelector"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 109,
+                            "column": 67,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 141,
+                            "line": 173,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 109,
+                            "column": 67,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 142,
+                            "line": 174,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 110,
+                            "column": 67,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 143,
+                            "line": 175,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 109,
+                            "column": 67,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 145,
+                            "line": 177,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 109,
+                            "column": 67,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 146,
+                            "line": 178,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 109,
+                            "column": 67,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 147,
+                            "line": 179,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 112,
+                            "column": 70,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 149,
+                            "line": 181,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 112,
+                            "column": 70,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 150,
+                            "line": 182,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 111,
+                            "column": 69,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 151,
+                            "line": 183,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 111,
+                            "column": 69,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 162,
+                            "line": 196,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 111,
+                            "column": 69,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 163,
+                            "line": 197,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 111,
+                            "column": 69,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 164,
+                            "line": 198,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 112,
+                            "column": 70,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 166,
+                            "line": 200,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 112,
+                            "column": 70,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 167,
+                            "line": 201,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 111,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 168,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 110,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 170,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 111,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 171,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 111,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 172,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 111,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 185,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 113,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 186,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 113,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 187,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 104,
+                            "column": 69,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
                             "line": 202,
@@ -311,15 +335,7 @@
                         },
                         {
                             "codegenResult": 2,
-                            "column": 104,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 203,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 104,
+                            "column": 68,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
                             "line": 204,
@@ -327,74 +343,146 @@
                         },
                         {
                             "codegenResult": 2,
-                            "column": 39,
+                            "column": 69,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 205,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 69,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
                             "line": 206,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 104,
+                            "codegenResult": 0,
+                            "column": 53,
                             "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 208,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 104,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 209,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 104,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 210,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 110,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 211,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 104,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 213,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 104,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
-                            "line": 214,
-                            "message": "Could not find signal \"clicked\"."
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 104,
-                            "durationMicroseconds": 0,
-                            "functionName": "onClicked",
+                            "functionName": "preferredHeight",
                             "line": 215,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 69,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 220,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 39,
+                            "column": 71,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 217,
+                            "line": 221,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 71,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 222,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 237,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 238,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 239,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 73,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 240,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 242,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 243,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 244,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 68,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 245,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 247,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 248,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 62,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 249,
+                            "message": "Could not find signal \"clicked\"."
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 91,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 250,
                             "message": "Could not find signal \"clicked\"."
                         }
                     ],

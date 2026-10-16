@@ -68,9 +68,23 @@ include CMakeFiles/module_appRecursiveCalculator_aotstats_target.dir/progress.ma
 CMakeFiles/module_appRecursiveCalculator_aotstats_target: .rcc/qmlcache/module_appRecursiveCalculator.aotstats
 
 .rcc/qmlcache/module_appRecursiveCalculator.aotstats: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats
+.rcc/qmlcache/module_appRecursiveCalculator.aotstats: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats
 .rcc/qmlcache/module_appRecursiveCalculator.aotstats: .rcc/qmlcache/module_appRecursiveCalculator.aotstatslist
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_appRecursiveCalculator.aotstats"
 	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmlaotstats.exe aggregate C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/module_appRecursiveCalculator.aotstatslist C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/module_appRecursiveCalculator.aotstats
+
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: C:/Qt/6.12.0/mingw_64/bin/qmlcachegen.exe
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: C:/projects/Qt/RecursiveCalculator/ControlButton.qml
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: .qt/rcc/qmake_RecursiveCalculator.qrc
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: .qt/rcc/appRecursiveCalculator_raw_qml_0.qrc
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: RecursiveCalculator/appRecursiveCalculator.qmltypes
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp: RecursiveCalculator/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp, .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache
+	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/RecursiveCalculator/ControlButton.qml -I C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug -I C:/Qt/6.12.0/mingw_64/qml -i C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/RecursiveCalculator/qmldir --resource C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qmake_RecursiveCalculator.qrc --resource C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/appRecursiveCalculator_raw_qml_0.qrc --dump-aot-stats --module-id=RecursiveCalculator(appRecursiveCalculator) -o C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp C:/projects/Qt/RecursiveCalculator/ControlButton.qml
+
+.rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appRecursiveCalculator_ControlButton_qml.cpp.aotstats
 
 .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp: C:/Qt/6.12.0/mingw_64/bin/qmlcachegen.exe
 .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp: C:/projects/Qt/RecursiveCalculator/Main.qml
@@ -78,13 +92,15 @@ CMakeFiles/module_appRecursiveCalculator_aotstats_target: .rcc/qmlcache/module_a
 .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp: .qt/rcc/appRecursiveCalculator_raw_qml_0.qrc
 .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp: RecursiveCalculator/appRecursiveCalculator.qmltypes
 .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp: RecursiveCalculator/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp, .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp, .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E make_directory C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache
 	call .qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmlcachegen.exe --bare --resource-path /qt/qml/RecursiveCalculator/Main.qml -I C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug -I C:/Qt/6.12.0/mingw_64/qml -i C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/RecursiveCalculator/qmldir --resource C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/qmake_RecursiveCalculator.qrc --resource C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/rcc/appRecursiveCalculator_raw_qml_0.qrc --dump-aot-stats --module-id=RecursiveCalculator(appRecursiveCalculator) -o C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp C:/projects/Qt/RecursiveCalculator/Main.qml
 
 .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\appRecursiveCalculator_Main_qml.cpp.aotstats
 
+module_appRecursiveCalculator_aotstats_target: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp
+module_appRecursiveCalculator_aotstats_target: .rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats
 module_appRecursiveCalculator_aotstats_target: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp
 module_appRecursiveCalculator_aotstats_target: .rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats
 module_appRecursiveCalculator_aotstats_target: .rcc/qmlcache/module_appRecursiveCalculator.aotstats

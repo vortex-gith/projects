@@ -27,14 +27,14 @@
 			"qt6_add_qml_module",
 			"qt_add_qml_module",
 			"add_dependencies",
-			"_qt_internal_write_qmldir_part",
 			"_qt_internal_qml_copy_files_to_build_dir",
+			"_qt_internal_write_qmldir_part",
+			"_qt_internal_write_deferred_qmlls_build_ini_file",
 			"_qt_internal_scan_qml_imports",
 			"_qt_internal_generate_deploy_qml_imports_script",
 			"cmake_language",
 			"_qt_internal_finalize_executable",
 			"qt6_finalize_target",
-			"_qt_internal_write_deferred_qmlls_build_ini_file",
 			"add_compile_definitions",
 			"project",
 			"target_include_directories",
@@ -74,8 +74,8 @@
 			"C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake",
 			"C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlDependencies.cmake",
 			"C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:1246:EVAL",
-			"C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:881:EVAL",
 			"C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:1189:EVAL",
+			"C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:881:EVAL",
 			"build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qtcreator/cmake-helper/qtcreator-project.cmake",
 			"C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake"
 		],
@@ -111,13 +111,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 43,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 39,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
@@ -415,24 +415,7 @@
 				"parent" : 59
 			},
 			{
-				"file" : 1,
-				"line" : -1,
-				"parent" : 0
-			},
-			{
 				"command" : 14,
-				"file" : 21,
-				"line" : 2,
-				"parent" : 61
-			},
-			{
-				"command" : 13,
-				"file" : 10,
-				"line" : 312,
-				"parent" : 62
-			},
-			{
-				"command" : 15,
 				"file" : 10,
 				"line" : 1049,
 				"parent" : 24
@@ -441,10 +424,10 @@
 				"command" : 13,
 				"file" : 10,
 				"line" : 3335,
-				"parent" : 64
+				"parent" : 61
 			},
 			{
-				"command" : 15,
+				"command" : 14,
 				"file" : 10,
 				"line" : 1055,
 				"parent" : 24
@@ -453,54 +436,71 @@
 				"command" : 13,
 				"file" : 10,
 				"line" : 3335,
-				"parent" : 66
+				"parent" : 63
 			},
 			{
-				"command" : 20,
-				"file" : 22,
-				"line" : 1,
-				"parent" : 61
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
 			},
 			{
-				"command" : 19,
-				"file" : 0,
-				"line" : 915,
-				"parent" : 68
-			},
-			{
-				"command" : 18,
-				"file" : 0,
-				"line" : 832,
-				"parent" : 69
-			},
-			{
-				"command" : 17,
-				"file" : 0,
-				"line" : 832,
-				"parent" : 70
-			},
-			{
-				"command" : 16,
-				"file" : 10,
-				"line" : 5126,
-				"parent" : 71
+				"command" : 15,
+				"file" : 21,
+				"line" : 2,
+				"parent" : 65
 			},
 			{
 				"command" : 13,
 				"file" : 10,
-				"line" : 4911,
-				"parent" : 72
+				"line" : 312,
+				"parent" : 66
 			},
 			{
-				"command" : 21,
-				"file" : 23,
+				"command" : 16,
+				"file" : 22,
 				"line" : 1,
-				"parent" : 61
+				"parent" : 65
 			},
 			{
 				"command" : 13,
 				"file" : 10,
 				"line" : 1474,
+				"parent" : 68
+			},
+			{
+				"command" : 21,
+				"file" : 23,
+				"line" : 1,
+				"parent" : 65
+			},
+			{
+				"command" : 20,
+				"file" : 0,
+				"line" : 915,
+				"parent" : 70
+			},
+			{
+				"command" : 19,
+				"file" : 0,
+				"line" : 832,
+				"parent" : 71
+			},
+			{
+				"command" : 18,
+				"file" : 0,
+				"line" : 832,
+				"parent" : 72
+			},
+			{
+				"command" : 17,
+				"file" : 10,
+				"line" : 5126,
+				"parent" : 73
+			},
+			{
+				"command" : 13,
+				"file" : 10,
+				"line" : 4911,
 				"parent" : 74
 			},
 			{
@@ -661,7 +661,7 @@
 				"command" : 34,
 				"file" : 0,
 				"line" : 906,
-				"parent" : 68
+				"parent" : 70
 			},
 			{
 				"command" : 26,
@@ -673,7 +673,7 @@
 				"command" : 35,
 				"file" : 0,
 				"line" : 849,
-				"parent" : 69
+				"parent" : 71
 			},
 			{
 				"command" : 26,
@@ -971,28 +971,28 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 63,
-			"id" : "generate_finalqtconf_appRecursiveCalculator::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 65,
+			"backtrace" : 62,
 			"id" : "appRecursiveCalculator_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 67,
+			"backtrace" : 64,
 			"id" : "appRecursiveCalculator_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 73,
-			"id" : "appRecursiveCalculator_qmlimportscan::@6890427a1f51a3e7e1df"
+			"backtrace" : 67,
+			"id" : "generate_finalqtconf_appRecursiveCalculator::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 75,
+			"backtrace" : 69,
 			"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "appRecursiveCalculator_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 75,
+			"id" : "appRecursiveCalculator_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "appRecursiveCalculator_autogen_timestamp_deps::@6890427a1f51a3e7e1df"

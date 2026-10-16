@@ -71,6 +71,7 @@ CMakeFiles/appRecursiveCalculator_qmlimportscan: .qt/qml_imports/appRecursiveCal
 .qt/qml_imports/appRecursiveCalculator_build.cmake: .qt/rcc/qmake_RecursiveCalculator.qrc
 .qt/qml_imports/appRecursiveCalculator_build.cmake: .qt/rcc/appRecursiveCalculator_raw_qml_0.qrc
 .qt/qml_imports/appRecursiveCalculator_build.cmake: C:/projects/Qt/RecursiveCalculator/Main.qml
+.qt/qml_imports/appRecursiveCalculator_build.cmake: C:/projects/Qt/RecursiveCalculator/ControlButton.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for appRecursiveCalculator"
 	cd /d C:\projects\Qt\RecursiveCalculator && call C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\.qt\bin\qt_setup_tool_path.bat C:/Qt/6.12.0/mingw_64/bin/qmlimportscanner.exe @C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/qml_imports/appRecursiveCalculator_build.rsp
 

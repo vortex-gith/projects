@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  ".rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp"
+  ".rcc/qmlcache/appRecursiveCalculator_ControlButton_qml.cpp.aotstats"
   ".rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp"
   ".rcc/qmlcache/appRecursiveCalculator_Main_qml.cpp.aotstats"
   ".rcc/qmlcache/module_appRecursiveCalculator.aotstats"
