@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/RecursiveCalculator/">
+    <file alias="Main.qml">D:/flash/projects/Qt/RecursiveCalculator/Main.qml</file>
+    <file alias="ControlButton.qml">D:/flash/projects/Qt/RecursiveCalculator/ControlButton.qml</file>
+  </qresource>
+</RCC>
+

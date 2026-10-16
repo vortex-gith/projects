@@ -154,6 +154,19 @@ class Calculator: public QObject
         double parseThird() // ^
         {
             double number = parseFourth();
+
+            while (pos < expression.size())
+            {
+                formated();
+                if(expression[pos] == '!')
+                {
+                    pos++;
+                    if(number < 0) throw std::invalid_argument("Ошибка! Отрицательный факториал!");
+                    number = std::tgamma(number + 1);
+                }
+                else break;
+            }
+
             while (pos < expression.size())
             {
                 formated();

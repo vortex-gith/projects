@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Qt\Tools\CMake_64\bin\cmake.exe
+CMAKE_COMMAND = D:\QT\Tools\CMake_64\bin\cmake.exe
 
 # The command to remove a file.
-RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
+RM = D:\QT\Tools\CMake_64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\projects\Qt\RecursiveCalculator
+CMAKE_SOURCE_DIR = D:\flash\projects\Qt\RecursiveCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
+CMAKE_BINARY_DIR = D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 
 # Utility rule file for appRecursiveCalculator_copy_res.
 
@@ -67,9 +67,9 @@ include CMakeFiles/appRecursiveCalculator_copy_res.dir/progress.make
 
 CMakeFiles/appRecursiveCalculator_copy_res: .qt/appRecursiveCalculator_res.txt
 
-.qt/appRecursiveCalculator_res.txt: C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying appRecursiveCalculator qml resources into build dir"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -DFILES_INFO_PATH=C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/appRecursiveCalculator_res.cmake -P C:/Qt/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
+.qt/appRecursiveCalculator_res.txt: D:/QT/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying appRecursiveCalculator qml resources into build dir"
+	D:\QT\Tools\CMake_64\bin\cmake.exe -DFILES_INFO_PATH=D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/appRecursiveCalculator_res.cmake -P D:/QT/6.12.0/mingw_64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake
 
 appRecursiveCalculator_copy_res: .qt/appRecursiveCalculator_res.txt
 appRecursiveCalculator_copy_res: CMakeFiles/appRecursiveCalculator_copy_res
@@ -85,6 +85,6 @@ CMakeFiles/appRecursiveCalculator_copy_res.dir/clean:
 .PHONY : CMakeFiles/appRecursiveCalculator_copy_res.dir/clean
 
 CMakeFiles/appRecursiveCalculator_copy_res.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\appRecursiveCalculator_copy_res.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\appRecursiveCalculator_copy_res.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/appRecursiveCalculator_copy_res.dir/depend
 
