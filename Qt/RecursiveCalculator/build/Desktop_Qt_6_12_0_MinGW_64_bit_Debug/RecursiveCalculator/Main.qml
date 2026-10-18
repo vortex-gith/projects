@@ -14,7 +14,6 @@ ApplicationWindow
     title: "Академический калькулятор"
     color: "#FFFFFF"
 
-
     Calculator
     {
         id: backendCalc
@@ -100,6 +99,11 @@ ApplicationWindow
                 }
 
                 background: null
+
+                Component.onCompleted:
+                {
+                    inputField.forceActiveFocus()
+                }
             }
         }
 
@@ -139,11 +143,62 @@ ApplicationWindow
                 id: modeSelector
 
                 palette.button: "#F3F4F6"
+                palette.buttonText: "#111827"
+                palette.highlight: "#E5E7EB"
+
+                popup.palette.highlight: "#E5E7EB"
+                popup.palette.highlightedText: "#111827"
+
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 font.pixelSize: 18 * (mainWindow.height * 0.0015)
 
-                model: ["Базовые операции", "Тригонометрические функции", "Логарифмы"]
+                focusPolicy: Qt.NoFocus
+
+                model: ["Базовые операции", "Тригонометрические функции", "Элементарные функции"]
+
+                contentItem: Text
+                {
+                    text: modeSelector.displayText
+                    font: modeSelector.font
+                    color: "#111827" // Цвет текста выбранного элемента (твой темно-серый)
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignLeft
+                    leftPadding: 12 // Отступ текста от левого края кнопки
+                    rightPadding: 30 // Чтобы текст не налезал на стрелочку справа
+                    elide: Text.ElideRight
+                }
+
+                background: Rectangle
+                {
+                    color: modeSelector.pressed ? "#E5E7EB" : "#F3F4F6" // Слегка темнеет при нажатии
+                    border.color: modeSelector.activeFocus ? "#3B82F6" : "#D1D5DB" // Синяя рамка, если в фокусе
+                    border.width: modeSelector.activeFocus ? 2 : 1
+                    radius: 8 // Симпатичное закругление углов кнопки
+                }
+
+                delegate: ItemDelegate
+                {
+                    width: modeSelector.width
+                    highlighted: modeSelector.highlightedIndex === index
+
+                           // Настройка фона элемента при наведении
+                    background: Rectangle
+                    {
+                               // #E5E7EB при наведении (ваш highlight), иначе прозрачный/белый
+                        color: highlighted ? "#E5E7EB" : "#F3F4F6"
+                    }
+
+                           // Настройка текста элемента
+                    contentItem: Text
+                    {
+                        text: modelData
+                        font: modeSelector.font
+                        color: "#111827" // Цвет текста всегда темный, как вы и хотели
+                        verticalAlignment: Text.AlignVCenter
+                        elide: Text.ElideRight
+                    }
+                }
             }
         }
 
@@ -180,9 +235,9 @@ ApplicationWindow
                         ControlButton { text: "("; onClicked: { inputField.insert(inputField.cursorPosition, "(") }}
                         ControlButton { text: ")"; onClicked: { inputField.insert(inputField.cursorPosition, ")") }}
 
-                        ControlButton { text: "sqrt"; onClicked: { inputField.insert(inputField.cursorPosition, "sqrt()") }}
-                        ControlButton { text: "cbrt"; onClicked: { inputField.insert(inputField.cursorPosition, "cbrt()") }}
-                        ControlButton { text: "inf"; onClicked: { inputField.insert(inputField.cursorPosition, "inf") }}
+                        ControlButton { text: "."; onClicked: { inputField.insert(inputField.cursorPosition, ".") }}
+                        ControlButton { text: "^"; onClicked: { inputField.insert(inputField.cursorPosition, "^") }}
+                        ControlButton { text: "!"; onClicked: { inputField.insert(inputField.cursorPosition, "!") }}
                     }
 
                     GridLayout
@@ -195,13 +250,13 @@ ApplicationWindow
                         rowSpacing: 5
                         columnSpacing: 5
 
-                        ControlButton { text: "sin"; onClicked: { inputField.insert(inputField.cursorPosition, "sin()") }}
-                        ControlButton { text: "cos"; onClicked: { inputField.insert(inputField.cursorPosition, "cos()") }}
-                        ControlButton { text: "tg";  onClicked: { inputField.insert(inputField.cursorPosition, "tg()") }}
+                        ControlButton { text: "sin"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "sin()"); inputField.cursorPosition = currentPos + 4; }}
+                        ControlButton { text: "cos"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "cos()"); inputField.cursorPosition = currentPos + 4; }}
+                        ControlButton { text: "tg";  onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "tg()"); inputField.cursorPosition = currentPos + 3; }}
 
-                        ControlButton { text: "asin"; onClicked: { inputField.insert(inputField.cursorPosition, "asin()") }}
-                        ControlButton { text: "acos"; onClicked: { inputField.insert(inputField.cursorPosition, "acos()") }}
-                        ControlButton { text: "atg"; onClicked: { inputField.insert(inputField.cursorPosition, "atg()") }}
+                        ControlButton { text: "asin"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "arcsin()"); inputField.cursorPosition = currentPos + 7; }}
+                        ControlButton { text: "acos"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "arccos()"); inputField.cursorPosition = currentPos + 7; }}
+                        ControlButton { text: "atg"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "arctg()"); inputField.cursorPosition = currentPos + 6; }}
 
                         ControlButton { text: "pi"; onClicked: { inputField.insert(inputField.cursorPosition, "pi") }}
                         ControlButton { text: "phi"; onClicked: { inputField.insert(inputField.cursorPosition, "phi") }}
@@ -213,8 +268,7 @@ ApplicationWindow
                         uniformCellWidths: true
                         uniformCellHeights: true
                         Layout.fillWidth: true
-                        Layout.fillHeight: false
-                        Layout.preferredHeight: bottomRow.height / 3
+                        Layout.fillHeight: true
                         columns: 3
                         rowSpacing: 5
                         columnSpacing: 5
@@ -222,6 +276,15 @@ ApplicationWindow
                         ControlButton { text: "log"; onClicked: { inputField.insert(inputField.cursorPosition, "log()") } }
                         ControlButton { text: "log10"; onClicked: { inputField.insert(inputField.cursorPosition, "log10()") } }
                         ControlButton { text: "log2";  onClicked: { inputField.insert(inputField.cursorPosition, "log2()") } }
+
+                        ControlButton { text: "sqrt"; onClicked: { inputField.insert(inputField.cursorPosition, "sqrt()") }}
+                        ControlButton { text: "cbrt"; onClicked: { inputField.insert(inputField.cursorPosition, "cbrt()") }}
+                        ControlButton { text: "inf"; onClicked: { inputField.insert(inputField.cursorPosition, "inf") }}
+
+                        ControlButton { text: "abs"; onClicked: { inputField.insert(inputField.cursorPosition, "abs()") }}
+                        ControlButton { text: "deg"; onClicked: { inputField.insert(inputField.cursorPosition, "deg()") }}
+                        ControlButton { text: "e"; onClicked: { inputField.insert(inputField.cursorPosition, "e") }}
+
                     }
                 }
             }

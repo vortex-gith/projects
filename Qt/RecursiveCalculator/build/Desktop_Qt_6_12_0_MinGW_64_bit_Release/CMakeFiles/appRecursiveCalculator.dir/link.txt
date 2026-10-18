@@ -1,3 +1,0 @@
-D:\QT\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\appRecursiveCalculator.dir/objects.a
-D:\QT\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\appRecursiveCalculator.dir/objects.a @CMakeFiles\appRecursiveCalculator.dir\objects1.rsp
-D:\QT\Tools\mingw1310_64\bin\g++.exe -O3 -DNDEBUG -mwindows -Wl,--whole-archive CMakeFiles\appRecursiveCalculator.dir/objects.a -Wl,--no-whole-archive -o appRecursiveCalculator.exe -Wl,--out-implib,libappRecursiveCalculator.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\appRecursiveCalculator.dir\linkLibs.rsp

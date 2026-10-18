@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\QT\Tools\CMake_64\bin\cmake.exe
+CMAKE_COMMAND = C:\Qt\Tools\CMake_64\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\QT\Tools\CMake_64\bin\cmake.exe -E rm -f
+RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\flash\projects\Qt\RecursiveCalculator
+CMAKE_SOURCE_DIR = C:\projects\Qt\RecursiveCalculator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
+CMAKE_BINARY_DIR = C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug
 
 # Utility rule file for generate_qmlls_build_ini_file.
 
@@ -68,13 +68,13 @@ include CMakeFiles/generate_qmlls_build_ini_file.dir/progress.make
 CMakeFiles/generate_qmlls_build_ini_file: .qt/.qmlls.build.ini
 
 .qt/.qmlls.build.ini:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Populating .qmlls.build.ini file at D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini"
-	D:\QT\Tools\CMake_64\bin\cmake.exe -E echo [General] > D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
-	D:\QT\Tools\CMake_64\bin\cmake.exe -E echo version=2 >> D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
-	D:\QT\Tools\CMake_64\bin\cmake.exe -E echo_append docDir= >> D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
-	D:\QT\6.12.0\mingw_64\bin\qtpaths.exe --query QT_INSTALL_DOCS >> D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
-	D:\QT\Tools\CMake_64\bin\cmake.exe -E echo [workspaces] >> D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
-	D:\QT\Tools\CMake_64\bin\cmake.exe -E cat D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini.part >> D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Populating .qmlls.build.ini file at C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E echo [General] > C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E echo version=2 >> C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E echo_append docDir= >> C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
+	C:\Qt\6.12.0\mingw_64\bin\qtpaths.exe --query QT_INSTALL_DOCS >> C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E echo [workspaces] >> C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cat C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini.part >> C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/.qt/.qmlls.build.ini
 
 generate_qmlls_build_ini_file: .qt/.qmlls.build.ini
 generate_qmlls_build_ini_file: CMakeFiles/generate_qmlls_build_ini_file
@@ -90,6 +90,6 @@ CMakeFiles/generate_qmlls_build_ini_file.dir/clean:
 .PHONY : CMakeFiles/generate_qmlls_build_ini_file.dir/clean
 
 CMakeFiles/generate_qmlls_build_ini_file.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug D:\flash\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\generate_qmlls_build_ini_file.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug C:\projects\Qt\RecursiveCalculator\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\CMakeFiles\generate_qmlls_build_ini_file.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/generate_qmlls_build_ini_file.dir/depend
 
