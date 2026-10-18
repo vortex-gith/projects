@@ -27,7 +27,7 @@ Button
 
     background: Rectangle
     {
-        radius: controlbtn.cornerRadius
+        radius: 8
         implicitWidth: 40
         implicitHeight: 40
 

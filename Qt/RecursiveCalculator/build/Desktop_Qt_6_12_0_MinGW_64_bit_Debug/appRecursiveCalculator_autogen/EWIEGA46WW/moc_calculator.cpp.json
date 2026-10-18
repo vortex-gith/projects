@@ -19,7 +19,7 @@
                         }
                     ],
                     "index": 0,
-                    "lineNumber": 223,
+                    "lineNumber": 237,
                     "name": "calculate",
                     "returnType": "QString"
                 }

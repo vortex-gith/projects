@@ -70,7 +70,6 @@ class Calculator: public QObject
                     if (expression[pos] == ')')
                     {
                         if (pos < expression.size()) pos++;
-                        return number;
                     }
                     else
                     {
@@ -147,13 +146,21 @@ class Calculator: public QObject
                     pos += 3;
                     return log(parseFourth());
                 }
+                else if (expression.substr(pos, 3) == "abs")
+                {
+                    pos += 3;
+                    return std::abs(parseFourth());
+                }
+                else if (expression.substr(pos, 3) == "deg")
+                {
+                    pos += 3;
+                    return parseFourth() * (180.0 / 3.141592653589793);
+                }
+                else
+                {
+                    number = parseFifth();
+                }
             }
-            return parseFifth();
-        }
-
-        double parseThird() // ^
-        {
-            double number = parseFourth();
 
             while (pos < expression.size())
             {
@@ -166,6 +173,13 @@ class Calculator: public QObject
                 }
                 else break;
             }
+
+            return number;
+        }
+
+        double parseThird() // ^
+        {
+            double number = parseFourth();
 
             while (pos < expression.size())
             {

@@ -17,7 +17,7 @@ Module {
         Method {
             name: "calculate"
             type: "QString"
-            lineNumber: 223
+            lineNumber: 237
             Parameter { name: "expression"; type: "QString" }
         }
     }

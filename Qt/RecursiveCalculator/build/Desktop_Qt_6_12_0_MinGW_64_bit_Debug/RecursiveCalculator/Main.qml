@@ -19,7 +19,6 @@ ApplicationWindow
         id: backendCalc
     }
 
-
     ColumnLayout
     {
         anchors.fill: parent
@@ -68,11 +67,6 @@ ApplicationWindow
                             calculateButton.clicked();
                             event.accepted = true;
                         }
-                    else if(event.key === Qt.Key_Backspace)
-                    {
-                        backspacebtn.clicked();
-                        event.accepted = true;
-                    }
                 }
             }
 
@@ -117,18 +111,18 @@ ApplicationWindow
             border.width: 1
             Text
             {
-                 id: outputField
-                 text: ""
-                 font.pixelSize: 18
-                 font.bold: true
-                 color: "#111827"
-                 anchors.fill: parent
-                 anchors.margins: 10
-                 horizontalAlignment: Text.AlignHCenter
-                 verticalAlignment: Text.AlignVCenter
+                id: outputField
+                text: ""
+                font.pixelSize: 18
+                font.bold: true
+                color: "#111827"
+                anchors.fill: parent
+                anchors.margins: 10
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
 
-                 fontSizeMode: Text.Fit
-                 minimumPixelSize: 12
+                fontSizeMode: Text.Fit
+                minimumPixelSize: 12
             }
         }
         Item
@@ -138,6 +132,8 @@ ApplicationWindow
 
         RowLayout
         {
+            id: middleRow
+
             ComboBox
             {
                 id: modeSelector
@@ -149,9 +145,11 @@ ApplicationWindow
                 popup.palette.highlight: "#E5E7EB"
                 popup.palette.highlightedText: "#111827"
 
-                Layout.fillWidth: true
+                Layout.fillWidth: false
                 Layout.fillHeight: true
                 font.pixelSize: 18 * (mainWindow.height * 0.0015)
+
+                Layout.preferredWidth: middleRow.width * 0.8
 
                 focusPolicy: Qt.NoFocus
 
@@ -161,20 +159,20 @@ ApplicationWindow
                 {
                     text: modeSelector.displayText
                     font: modeSelector.font
-                    color: "#111827" // Цвет текста выбранного элемента (твой темно-серый)
+                    color: "#111827"
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignLeft
-                    leftPadding: 12 // Отступ текста от левого края кнопки
-                    rightPadding: 30 // Чтобы текст не налезал на стрелочку справа
+                    leftPadding: 12
+                    rightPadding: 30
                     elide: Text.ElideRight
                 }
 
                 background: Rectangle
                 {
-                    color: modeSelector.pressed ? "#E5E7EB" : "#F3F4F6" // Слегка темнеет при нажатии
-                    border.color: modeSelector.activeFocus ? "#3B82F6" : "#D1D5DB" // Синяя рамка, если в фокусе
+                    color: modeSelector.pressed ? "#E5E7EB" : "#F3F4F6"
+                    border.color: modeSelector.activeFocus ? "#3B82F6" : "#D1D5DB"
                     border.width: modeSelector.activeFocus ? 2 : 1
-                    radius: 8 // Симпатичное закругление углов кнопки
+                    radius: 8
                 }
 
                 delegate: ItemDelegate
@@ -182,23 +180,27 @@ ApplicationWindow
                     width: modeSelector.width
                     highlighted: modeSelector.highlightedIndex === index
 
-                           // Настройка фона элемента при наведении
                     background: Rectangle
                     {
-                               // #E5E7EB при наведении (ваш highlight), иначе прозрачный/белый
                         color: highlighted ? "#E5E7EB" : "#F3F4F6"
                     }
 
-                           // Настройка текста элемента
                     contentItem: Text
                     {
                         text: modelData
                         font: modeSelector.font
-                        color: "#111827" // Цвет текста всегда темный, как вы и хотели
+                        color: "#111827"
                         verticalAlignment: Text.AlignVCenter
                         elide: Text.ElideRight
                     }
                 }
+            }
+
+            ControlButton
+            {
+                text: "C";
+
+                onClicked: { inputField.text = ""; outputField.text = "" }
             }
         }
 
@@ -254,9 +256,9 @@ ApplicationWindow
                         ControlButton { text: "cos"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "cos()"); inputField.cursorPosition = currentPos + 4; }}
                         ControlButton { text: "tg";  onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "tg()"); inputField.cursorPosition = currentPos + 3; }}
 
-                        ControlButton { text: "asin"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "arcsin()"); inputField.cursorPosition = currentPos + 7; }}
-                        ControlButton { text: "acos"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "arccos()"); inputField.cursorPosition = currentPos + 7; }}
-                        ControlButton { text: "atg"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "arctg()"); inputField.cursorPosition = currentPos + 6; }}
+                        ControlButton { text: "asin"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "asin()"); inputField.cursorPosition = currentPos + 5; }}
+                        ControlButton { text: "acos"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "acos()"); inputField.cursorPosition = currentPos + 5; }}
+                        ControlButton { text: "atg"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "atg()"); inputField.cursorPosition = currentPos + 4; }}
 
                         ControlButton { text: "pi"; onClicked: { inputField.insert(inputField.cursorPosition, "pi") }}
                         ControlButton { text: "phi"; onClicked: { inputField.insert(inputField.cursorPosition, "phi") }}
@@ -273,16 +275,16 @@ ApplicationWindow
                         rowSpacing: 5
                         columnSpacing: 5
 
-                        ControlButton { text: "log"; onClicked: { inputField.insert(inputField.cursorPosition, "log()") } }
-                        ControlButton { text: "log10"; onClicked: { inputField.insert(inputField.cursorPosition, "log10()") } }
-                        ControlButton { text: "log2";  onClicked: { inputField.insert(inputField.cursorPosition, "log2()") } }
+                        ControlButton { text: "log"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "log()"); inputField.cursorPosition = currentPos + 4; }}
+                        ControlButton { text: "log10"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "log10()"); inputField.cursorPosition = currentPos + 6; }}
+                        ControlButton { text: "log2";  onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "log2()"); inputField.cursorPosition = currentPos + 5; } }
 
-                        ControlButton { text: "sqrt"; onClicked: { inputField.insert(inputField.cursorPosition, "sqrt()") }}
-                        ControlButton { text: "cbrt"; onClicked: { inputField.insert(inputField.cursorPosition, "cbrt()") }}
+                        ControlButton { text: "sqrt"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "sqrt()"); inputField.cursorPosition = currentPos + 5; }}
+                        ControlButton { text: "cbrt"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "cbrt()"); inputField.cursorPosition = currentPos + 5; }}
                         ControlButton { text: "inf"; onClicked: { inputField.insert(inputField.cursorPosition, "inf") }}
 
-                        ControlButton { text: "abs"; onClicked: { inputField.insert(inputField.cursorPosition, "abs()") }}
-                        ControlButton { text: "deg"; onClicked: { inputField.insert(inputField.cursorPosition, "deg()") }}
+                        ControlButton { text: "abs"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "abs()"); inputField.cursorPosition = currentPos + 4; }}
+                        ControlButton { text: "deg"; onClicked: { let currentPos = inputField.cursorPosition; inputField.insert(currentPos, "deg()"); inputField.cursorPosition = currentPos + 4; }}
                         ControlButton { text: "e"; onClicked: { inputField.insert(inputField.cursorPosition, "e") }}
 
                     }
@@ -302,12 +304,12 @@ ApplicationWindow
                    ControlButton { text: "7"; onClicked: { inputField.insert(inputField.cursorPosition, "7") } }
                    ControlButton { text: "8"; onClicked: { inputField.insert(inputField.cursorPosition, "8") } }
                    ControlButton { text: "9"; onClicked: { inputField.insert(inputField.cursorPosition, "9") } }
-                   ControlButton { text: "C"; onClicked: { inputField.text = ""; outputField.text = "" }}
+                   ControlButton { text: "0"; onClicked: { inputField.insert(inputField.cursorPosition, "0") } }
 
                    ControlButton { text: "4"; onClicked: { inputField.insert(inputField.cursorPosition, "4") } }
                    ControlButton { text: "5"; onClicked: { inputField.insert(inputField.cursorPosition, "5") } }
                    ControlButton { text: "6"; onClicked: { inputField.insert(inputField.cursorPosition, "6") } }
-                   ControlButton { id: backspacebtn; text: "⌫"; onClicked: { if(inputField.text.length > 0) {inputField.text = inputField.text.slice(0, -1)} } }
+                   ControlButton { id: backspacebtn; text: "⌫"; onClicked: { if(inputField.cursorPosition > 0) {inputField.remove(inputField.cursorPosition - 1, inputField.cursorPosition)} } }
 
                    ControlButton { text: "1"; onClicked: { inputField.insert(inputField.cursorPosition, "1") } }
                    ControlButton { text: "2"; onClicked: { inputField.insert(inputField.cursorPosition, "2") } }

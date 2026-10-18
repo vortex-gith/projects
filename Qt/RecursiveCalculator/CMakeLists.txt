@@ -24,6 +24,7 @@ qt_add_qml_module(appRecursiveCalculator
         SOURCES calculator.h
         QML_FILES
         QML_FILES ControlButton.qml
+        RESOURCES ICON.png
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

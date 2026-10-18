@@ -63,14 +63,6 @@
                         },
                         {
                             "codegenResult": 2,
-                            "column": 17,
-                            "durationMicroseconds": 0,
-                            "functionName": "radius",
-                            "line": 30,
-                            "message": "Cannot access value for name controlbtn"
-                        },
-                        {
-                            "codegenResult": 2,
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "color",
@@ -78,7 +70,7 @@
                             "message": "Cannot access value for name controlbtn"
                         }
                     ],
-                    "filePath": "C:/projects/Qt/RecursiveCalculator/ControlButton.qml"
+                    "filePath": "D:/flash/projects/Qt/RecursiveCalculator/ControlButton.qml"
                 }
             ],
             "moduleId": "RecursiveCalculator(appRecursiveCalculator)"
