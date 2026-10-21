@@ -314,7 +314,34 @@ ApplicationWindow
                    ControlButton { text: "1"; onClicked: { inputField.insert(inputField.cursorPosition, "1") } }
                    ControlButton { text: "2"; onClicked: { inputField.insert(inputField.cursorPosition, "2") } }
                    ControlButton { text: "3"; onClicked: { inputField.insert(inputField.cursorPosition, "3") } }
-                   ControlButton { id: calculateButton; text: "="; font.pixelSize: 22 * (mainWindow.height * 0.0015); onClicked: { outputField.text = backendCalc.calculate(inputField.text); inputField.text = ""} }
+                   ControlButton
+                   {
+                       id: calculateButton; text: "=";
+                        onClicked: { outputField.text = backendCalc.calculate(inputField.text); inputField.text = ""}
+
+                        contentItem: Text
+                        {
+                            text: calculateButton.text
+                            font.pixelSize: 22 * (mainWindow.height * 0.0015)
+                            color: "#ffffff"
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
+                        }
+
+                        background: Rectangle
+                        {
+                            color: calculateButton.hovered ? "#2b4c7e" : "#1a365d";
+                            border.color: calculateButton.hovered ? "#3b629b" : "#102a43";
+                            border.width: 1
+                            radius: 8
+                            implicitWidth: 40
+                            implicitHeight: 40
+                            Behavior on color
+                            {
+                                ColorAnimation { duration: 70 }
+                            }
+                        }
+                   }
                 }
             }
         }

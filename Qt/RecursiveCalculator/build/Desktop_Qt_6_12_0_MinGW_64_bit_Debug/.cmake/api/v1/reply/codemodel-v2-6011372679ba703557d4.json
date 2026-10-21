@@ -1,0 +1,241 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-27308acb0db3a6e76af6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RecursiveCalculator",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-4e5f3e0c2ca5a0398ff4.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-77f80401028de5db16a3.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-ff31889a557dad2e4ac4.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-1e663020eb960c34c266.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-53cb1e528ee012c6e676.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator-Debug-8e6c4608247dfbe99483.json",
+					"name" : "appRecursiveCalculator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_autogen-Debug-7e9db6558d6cb6033a80.json",
+					"name" : "appRecursiveCalculator_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_autogen_timestamp_deps-Debug-862e5f6522ad6bcf735c.json",
+					"name" : "appRecursiveCalculator_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_copy_qml-Debug-2f0da11ccaf0239a9514.json",
+					"name" : "appRecursiveCalculator_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_copy_res-Debug-59b8b71b4fba4ff18625.json",
+					"name" : "appRecursiveCalculator_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_qmlimportscan-Debug-579e1b02917aa6d8a163.json",
+					"name" : "appRecursiveCalculator_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_qmllint-Debug-c27b2693dff6b3ec136f.json",
+					"name" : "appRecursiveCalculator_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_qmllint_json-Debug-5ee473f9fd5839012a82.json",
+					"name" : "appRecursiveCalculator_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_qmllint_module-Debug-b1904f44971df8d9eb75.json",
+					"name" : "appRecursiveCalculator_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_qmlpreview::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_qmlpreview-Debug-d82ef54744685b3614cb.json",
+					"name" : "appRecursiveCalculator_qmlpreview",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appRecursiveCalculator_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appRecursiveCalculator_qmltyperegistration-Debug-817d8efdb21562034ce2.json",
+					"name" : "appRecursiveCalculator_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "clean_qml_context_properties::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-clean_qml_context_properties-Debug-d9c7218ce05fc6b92dfc.json",
+					"name" : "clean_qml_context_properties",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dump_qml_context_properties::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dump_qml_context_properties-Debug-3ee0b644658b3147f499.json",
+					"name" : "dump_qml_context_properties",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_finalqtconf_appRecursiveCalculator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_finalqtconf_appRecursiveCalculator-Debug-fd6233f3607d2e03f8c1.json",
+					"name" : "generate_finalqtconf_appRecursiveCalculator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_qmlls_build_ini_file::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_qmlls_build_ini_file-Debug-480bba932d553502c9eb.json",
+					"name" : "generate_qmlls_build_ini_file",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appRecursiveCalculator_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appRecursiveCalculator_aotstats_target-Debug-c40a61b6e6a7aaff4842.json",
+					"name" : "module_appRecursiveCalculator_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug",
+		"source" : "C:/projects/Qt/RecursiveCalculator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

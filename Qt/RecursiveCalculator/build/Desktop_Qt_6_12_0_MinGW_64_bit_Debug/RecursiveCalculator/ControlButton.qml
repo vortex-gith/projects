@@ -31,6 +31,9 @@ Button
         implicitWidth: 40
         implicitHeight: 40
 
+        border.color: "#e2e8f0"
+        border.width: 1
+
         color: controlbtn.down ? controlbtn.pressColor : (controlbtn.hovered ? controlbtn.hoverColor : controlbtn.baseColor)
 
         Behavior on color { ColorAnimation { duration: 70 } }

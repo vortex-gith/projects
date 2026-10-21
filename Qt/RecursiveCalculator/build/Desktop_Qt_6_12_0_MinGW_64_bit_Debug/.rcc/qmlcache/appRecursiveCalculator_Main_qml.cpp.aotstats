@@ -216,7 +216,7 @@
                         {
                             "codegenResult": 0,
                             "column": 40,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 7000,
                             "functionName": "preferredWidth",
                             "line": 152,
                             "message": ""
@@ -671,22 +671,62 @@
                         },
                         {
                             "codegenResult": 2,
-                            "column": 130,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 317,
+                            "line": 320,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
                             "codegenResult": 2,
-                            "column": 84,
+                            "column": 35,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 324,
+                            "message": "Cannot access value for name calculateButton"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 50,
+                            "durationMicroseconds": 0,
+                            "functionName": "horizontalAlignment",
+                            "line": 327,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 48,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 328,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 45,
                             "durationMicroseconds": 0,
                             "functionName": "pixelSize",
-                            "line": 317,
-                            "message": "Could not find property \"pixelSize\"."
+                            "line": 325,
+                            "message": "Cannot access value for name mainWindow"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 333,
+                            "message": "Cannot access value for name calculateButton"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 334,
+                            "message": "Cannot access value for name calculateButton"
                         }
                     ],
-                    "filePath": "D:/flash/projects/Qt/RecursiveCalculator/Main.qml"
+                    "filePath": "C:/projects/Qt/RecursiveCalculator/Main.qml"
                 }
             ],
             "moduleId": "RecursiveCalculator(appRecursiveCalculator)"

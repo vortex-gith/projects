@@ -3,7 +3,9 @@
 #include <thread>
 #include <mutex>
 #include <vector>
+#include <string>
 #include <condition_variable>
+#include <unordered_map>
 
 struct SafeBuffer
 {

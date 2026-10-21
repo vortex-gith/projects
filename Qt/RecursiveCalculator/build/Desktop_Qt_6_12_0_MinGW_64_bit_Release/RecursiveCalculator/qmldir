@@ -1,7 +1,0 @@
-module RecursiveCalculator
-typeinfo appRecursiveCalculator.qmltypes
-prefer :/qt/qml/RecursiveCalculator/
-Main 254.0 Main.qml
-ControlButton 254.0 ControlButton.qml
-depends QtQuick
-

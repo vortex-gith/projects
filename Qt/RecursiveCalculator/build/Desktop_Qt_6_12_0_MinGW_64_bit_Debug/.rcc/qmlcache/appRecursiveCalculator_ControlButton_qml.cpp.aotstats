@@ -66,11 +66,11 @@
                             "column": 16,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 34,
+                            "line": 37,
                             "message": "Cannot access value for name controlbtn"
                         }
                     ],
-                    "filePath": "D:/flash/projects/Qt/RecursiveCalculator/ControlButton.qml"
+                    "filePath": "C:/projects/Qt/RecursiveCalculator/ControlButton.qml"
                 }
             ],
             "moduleId": "RecursiveCalculator(appRecursiveCalculator)"

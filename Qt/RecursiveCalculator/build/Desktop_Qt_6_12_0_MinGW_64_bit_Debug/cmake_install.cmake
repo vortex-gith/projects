@@ -1,4 +1,4 @@
-# Install script for directory: D:/flash/projects/Qt/RecursiveCalculator
+# Install script for directory: C:/projects/Qt/RecursiveCalculator
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,15 +34,15 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/QT/Tools/mingw1310_64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Qt/Tools/mingw1310_64/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/appRecursiveCalculator.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/appRecursiveCalculator.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appRecursiveCalculator.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appRecursiveCalculator.exe")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "D:/QT/Tools/mingw1310_64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appRecursiveCalculator.exe")
+      execute_process(COMMAND "C:/Qt/Tools/mingw1310_64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/appRecursiveCalculator.exe")
     endif()
   endif()
 endif()
@@ -62,6 +62,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "D:/flash/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/projects/Qt/RecursiveCalculator/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

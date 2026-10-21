@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/RecursiveCalculator/">
-    <file alias="ICON.png">D:/flash/projects/Qt/RecursiveCalculator/ICON.png</file>
-  </qresource>
-</RCC>
-
