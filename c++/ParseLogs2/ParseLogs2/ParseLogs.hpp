@@ -31,7 +31,7 @@ private:
     SafeBuffer currentSafeVector;
     SafeLogMap current_log_vector;
 public:
-    ParseLogs(SafeBuffer& SafeVectorForParse, SafeLogMap& log_vector) {}
+    ParseLogs() {}
 
     void parse(SafeBuffer& SafeVectorForParsedWriter, SafeLogMap& log_vector, SafeBuffer& SafeVectorForParse)
     {

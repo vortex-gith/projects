@@ -56,10 +56,10 @@ int main()
     SafeBuffer SafeVectorForSimpleWriter;
     SafeBuffer SafeVectorForParse;
 
-    LogGenerator Generator(log_count, SafeVectorForSimpleWriter);
-    RawLogsWriter RawWriter(SafeVectorForSimpleWriter, SafeVectorForParse);
-    ParseLogs Parser(SafeVectorForParse, log_vector);
-    ParsedLogWriter ParsedWriter(log_vector);
+    LogGenerator Generator;
+    RawLogsWriter RawWriter;
+    ParseLogs Parser;
+    ParsedLogWriter ParsedWriter;
 
 
     std::thread Generate(&LogGenerator::generate, &Generator, log_count, std::ref(SafeVectorForSimpleWriter));

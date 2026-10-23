@@ -14,7 +14,7 @@ class RawLogsWriter
 private:
     SafeBuffer currentSafeVector;
 public:
-    RawLogsWriter(SafeBuffer& SafeVectorForSimpleWriter, SafeBuffer& SafeVectorForParse) {}
+    RawLogsWriter() {}
 
     void write(SafeBuffer& SafeVectorForParse, SafeBuffer& SafeVectorForSimpleWriter)
     {

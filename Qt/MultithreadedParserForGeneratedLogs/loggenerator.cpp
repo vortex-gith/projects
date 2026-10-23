@@ -21,7 +21,7 @@ std::string LogGenerator::generateSupporter(const std::string& log_type, const s
            + hour_str + ":" + min_str + "] [" + log_type + "] " + comment + "\n";
 }
 
-void LogGenerator::generate(int log_count, SafeBuffer& SafeVector, SafeBuffer& SafeVectorForSimpleWrite)
+void LogGenerator::generate(int log_count, SafeBuffer& SafeVectorForSimpleWrite)
 {
     std::vector<std::string> raw_vector_logs;
     std::string currentLog;

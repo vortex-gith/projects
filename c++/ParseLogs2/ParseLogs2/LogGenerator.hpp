@@ -42,7 +42,7 @@ private:
     };
 
 public:
-    LogGenerator(int log_count, SafeBuffer& SafeVector)
+    LogGenerator()
     {
         srand(time(0));
     }
@@ -101,6 +101,7 @@ public:
                 SafeVectorForSimpleWrite.safe_vector.push_back(std::move(raw_vector_logs));
                 raw_vector_logs.clear();
             }
+            SafeVectorForSimpleWrite.cv.notify_one();
         }
 
         {

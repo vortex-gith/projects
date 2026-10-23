@@ -21,7 +21,7 @@ class ParsedLogWriter
 private:
     std::unordered_map<std::string, logInfo> current_log_vector;
 public:
-    ParsedLogWriter(SafeLogMap& log_vector) {}
+    ParsedLogWriter() {}
 
     void write(SafeLogMap& log_vector)
     {

@@ -7,15 +7,15 @@ Q_INVOKABLE void MainController::initialization(size_t log_count)
 
 Q_INVOKABLE void MainController::start_threads()
 {
-    std::thread Generate(&LogGenerator::generate, &LGenerator, log_count, std::ref(SafeVectorForSimpleWriter));
-    std::thread PutRawLogs(&RawLogsWriter::write, &PLWriter, std::ref(SafeVectorForParse), std::ref(SafeVectorForSimpleWriter));
-    std::thread ParseLogs(&ParseLogs::parse, &PLogs, std::ref(SafeVectorForSimpleWriter), std::ref(log_vector), std::ref(SafeVectorForParse));
-    std::thread PutParseLogs(&ParsedLogWriter::write, std::ref(RLWriter), std::ref(log_vector));
+    std::thread lgeneratorThread(&LogGenerator::generate, &LGenerator, log_count, std::ref(SafeVectorForSimpleWriter));
+    std::thread plogsThread(&ParseLogs::parse, &PLogs, std::ref(SafeVectorForSimpleWriter), std::ref(log_vector), std::ref(SafeVectorForParse));
+    std::thread plwriterThread(&RawLogsWriter::write, &PLWriter, std::ref(SafeVectorForParse), std::ref(SafeVectorForSimpleWriter));
+    std::thread rlwriterThread(&ParsedLogWriter::write, &RLWriter, std::ref(log_vector));
 
-    Generate.join();
-    PutRawLogs.join();
-    ParseLogs.join();
-    PutParseLogs.join();
+    lgeneratorThread.join();
+    plwriterThread.join();
+    plogsThread.join();
+    rlwriterThread.join();
 }
 
 Q_INVOKABLE void MainController::stop_threads()
