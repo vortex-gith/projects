@@ -1,4 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (ParserLog.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  ParserLog.cpp
-E:\проекты\ParserLog\ParserLog\ParserLog.cpp(153,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  ParserLog.vcxproj -> E:\проекты\ParserLog\x64\Debug\ParserLog1.0.exe

@@ -1,8 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: промежуточный каталог (x64\Release\) содержит файлы, которые используются совместно с другим проектом (ParserLog.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  ParserLog.cpp
-E:\проекты\ParserLog\ParserLog\ParserLog.cpp(153,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Создание кода
-  Previous IPDB not found, fall back to full compilation.
-  All 918 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Создание кода завершено
-  ParserLog.vcxproj -> E:\проекты\ParserLog\x64\Release\ParserLog1.0.exe
