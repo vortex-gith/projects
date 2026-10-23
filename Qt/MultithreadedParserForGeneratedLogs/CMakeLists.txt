@@ -28,6 +28,7 @@ qt_add_qml_module(appMultithreadedParserForGeneratedLogs
         SOURCES parselogs.h parselogs.cpp
         SOURCES parsedlogswriter.h parsedlogswriter.cpp
         SOURCES safebuffer.h
+        SOURCES maincontroller.h maincontroller.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
