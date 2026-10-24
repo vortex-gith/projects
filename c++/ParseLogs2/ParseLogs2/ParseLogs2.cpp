@@ -61,16 +61,15 @@ int main()
     ParseLogs Parser;
     ParsedLogWriter ParsedWriter;
 
+    std::thread LogGeneratorThread(&LogGenerator::generate, &Generator, log_count, std::ref(SafeVectorForSimpleWriter));
+    std::thread RawLogsWriterThread(&RawLogsWriter::write, &RawWriter, std::ref(SafeVectorForParse), std::ref(SafeVectorForSimpleWriter));
+    std::thread ParseLogsThread(&ParseLogs::parse, &Parser, std::ref(SafeVectorForSimpleWriter), std::ref(log_vector), std::ref(SafeVectorForParse));
+    std::thread ParsedLogWriterThread(&ParsedLogWriter::write, &ParsedWriter, std::ref(log_vector));
 
-    std::thread Generate(&LogGenerator::generate, &Generator, log_count, std::ref(SafeVectorForSimpleWriter));
-    std::thread PutRawLogs(&RawLogsWriter::write, &RawWriter, std::ref(SafeVectorForParse), std::ref(SafeVectorForSimpleWriter));
-    std::thread ParseLogs(&ParseLogs::parse, &Parser, std::ref(SafeVectorForSimpleWriter), std::ref(log_vector), std::ref(SafeVectorForParse));
-    std::thread PutParseLogs(&ParsedLogWriter::write, &ParsedWriter, std::ref(log_vector));
-
-    Generate.join();
-    PutRawLogs.join();
-    ParseLogs.join();
-    PutParseLogs.join();
+    LogGeneratorThread.join();
+    RawLogsWriterThread.join();
+    ParseLogsThread.join();
+    ParsedLogWriterThread.join();
 
     system("start RawLogs.txt");
     system("start ParsedLogs.txt");

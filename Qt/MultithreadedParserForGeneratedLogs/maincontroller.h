@@ -13,10 +13,10 @@
 
 class MainController : public QObject
 {
+private:
     Q_OBJECT
     QML_ELEMENT
 
-private:
     size_t log_count = 0;
     bool is_done = false;
 
@@ -27,10 +27,10 @@ private:
     SafeBuffer SafeVectorForSimpleWriter;
     SafeBuffer SafeVectorForParse;
 
-    LogGenerator LGenerator();
-    ParsedLogWriter PLWriter();
-    ParseLogs PLogs();
-    RawLogsWriter RLWriter();
+    LogGenerator LGenerator;
+    ParseLogs PLogs;
+    RawLogsWriter RLWriter;
+    ParsedLogWriter PLWriter;
 public:
     explicit MainController(QObject *parent = nullptr): QObject(parent) {}
 

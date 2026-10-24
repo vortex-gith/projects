@@ -34,7 +34,7 @@ public:
 
     std::string generateSupporter(const std::string& log_type, const std::string& comment);
 
-    void generate(int log_count, SafeBuffer& SafeVector, SafeBuffer& SafeVectorForSimpleWrite);
+    void generate(int log_count, SafeBuffer& SafeVectorForSimpleWrite);
 };
 
 #endif // LOGGENERATOR_H
