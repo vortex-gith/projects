@@ -18,7 +18,7 @@ void ParsedLogWriter::write(SafeLogMap& log_vector)
 
         std::ofstream parsedLogWriter("ParsedLogs.txt", std::ios::app);
         if (!parsedLogWriter.is_open()) return;
-        for (const auto& [lvl, info] : current_log_vector)
+        for (const auto& [lvl, info] : current_log_vector) //идет запись в файл. переделать
         {
             int counterI = 1;
             parsedLogWriter << "\nУровень логирования: " << lvl;
@@ -43,5 +43,3 @@ void ParsedLogWriter::write(SafeLogMap& log_vector)
         current_log_vector.clear();
     }
 }
-
-ParsedLogWriter::~ParsedLogWriter() {}

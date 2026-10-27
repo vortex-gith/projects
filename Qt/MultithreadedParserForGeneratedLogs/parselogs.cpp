@@ -13,6 +13,7 @@ void ParseLogs::parse(SafeBuffer& SafeVectorForParsedWriter, SafeLogMap& log_vec
             }
             currentSafeVector.safe_vector = std::move(SafeVectorForParse.safe_vector);
         }
+        SafeVectorForParse.cv.notify_one();
 
         for (std::vector<std::string>& vector : currentSafeVector.safe_vector)
         {
@@ -55,13 +56,14 @@ void ParseLogs::parse(SafeBuffer& SafeVectorForParsedWriter, SafeLogMap& log_vec
             std::unique_lock<std::mutex> lock(log_vector.mtx);
             log_vector.cv.wait(lock, [&]() {return log_vector.data.empty();});
             log_vector.data = std::move(current_log_vector.data);
-            log_vector.cv.notify_one();
         }
+        log_vector.cv.notify_one();
     }
 
-    std::lock_guard<std::mutex> lock(log_vector.mtx);
-    log_vector.is_done = true;
+    {
+        std::lock_guard<std::mutex> lock(log_vector.mtx);
+        log_vector.is_done = true;
+    }
+
     log_vector.cv.notify_one();
 }
-
-ParseLogs::~ParseLogs() {}

@@ -68,5 +68,3 @@ void LogGenerator::generate(int log_count, SafeBuffer& SafeVectorForSimpleWrite)
 
     SafeVectorForSimpleWrite.cv.notify_all();
 }
-
-LogGenerator::~LogGenerator() {}

@@ -1,0 +1,555 @@
+﻿
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\CMakeLists.txt ---
+
+cmake_minimum_required(VERSION 3.16)
+
+project(MultithreadedParserForGeneratedLogs VERSION 0.1 LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Quick)
+
+qt_standard_project_setup(REQUIRES 6.10)
+
+# Content of downloaded design from Figma to Qt or similar
+if (EXISTS "${CMAKE_CURRENT_LIST_DIR}/importedcontent/CMakeLists.txt")
+    add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/importedcontent)
+endif()
+
+qt_add_executable(appMultithreadedParserForGeneratedLogs
+    main.cpp
+)
+
+qt_add_qml_module(appMultithreadedParserForGeneratedLogs
+    URI MultithreadedParserForGeneratedLogs
+    QML_FILES
+        Main.qml
+        SOURCES
+        SOURCES
+        SOURCES rawlogswriter.h rawlogswriter.cpp
+        SOURCES loggenerator.h loggenerator.cpp
+        SOURCES parselogs.h parselogs.cpp
+        SOURCES parsedlogswriter.h parsedlogswriter.cpp
+        SOURCES safebuffer.h
+        SOURCES maincontroller.h maincontroller.cpp
+)
+
+# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
+# If you are developing for iOS or macOS you should consider setting an
+# explicit, fixed bundle identifier manually though.
+set_target_properties(appMultithreadedParserForGeneratedLogs PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appMultithreadedParserForGeneratedLogs
+    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    MACOSX_BUNDLE TRUE
+    WIN32_EXECUTABLE TRUE
+)
+
+target_link_libraries(appMultithreadedParserForGeneratedLogs
+    PRIVATE Qt6::Quick
+)
+
+install(TARGETS appMultithreadedParserForGeneratedLogs
+    BUNDLE DESTINATION .
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\loggenerator.cpp ---
+
+#include "loggenerator.h"
+
+LogGenerator::LogGenerator()
+{
+    srand(static_cast<unsigned int>(time(nullptr)));
+}
+
+std::string LogGenerator::generateSupporter(const std::string& log_type, const std::string& comment)
+{
+    std::time_t t = (static_cast<std::time_t>(rand()) * 1000) + 1755689600;
+    std::tm now;
+    localtime_s(&now, &t);
+
+    std::string day_str = (now.tm_mday < 10 ? "0" : "") + std::to_string(now.tm_mday);
+    std::string mon_str = ((now.tm_mon + 1) < 10 ? "0" : "") + std::to_string(now.tm_mon + 1);
+    std::string year_str = std::to_string(now.tm_year + 1900);
+    std::string hour_str = (now.tm_hour < 10 ? "0" : "") + std::to_string(now.tm_hour);
+    std::string min_str = (now.tm_min < 10 ? "0" : "") + std::to_string(now.tm_min);
+
+    return " [" + day_str + "." + mon_str + "." + year_str + "] ["
+           + hour_str + ":" + min_str + "] [" + log_type + "] " + comment + "\n";
+}
+
+void LogGenerator::generate(int log_count, SafeBuffer& SafeVectorForSimpleWrite)
+{
+    std::vector<std::string> raw_vector_logs;
+    std::string currentLog;
+
+    int counter_supporter = log_count;
+
+    for (int i = 0; i < log_count; i++)
+    {
+        int random_number = rand() % warning_list.size();
+        int count = 0;
+
+        count = (rand() % 3) + random_number * 3;
+        std::string comment = comment_list[count];
+
+        currentLog = generateSupporter(warning_list[random_number], comment);
+        raw_vector_logs.push_back(currentLog);
+
+        counter_supporter--;
+
+        if (raw_vector_logs.size() == 3000)
+        {
+            {
+                std::unique_lock<std::mutex> lock(SafeVectorForSimpleWrite.mtx);
+                SafeVectorForSimpleWrite.safe_vector.push_back(std::move(raw_vector_logs));
+                raw_vector_logs.clear();
+            }
+            SafeVectorForSimpleWrite.cv.notify_one();
+        }
+    }
+    if (!raw_vector_logs.empty())
+    {
+        {
+            std::unique_lock<std::mutex> lock(SafeVectorForSimpleWrite.mtx);
+            SafeVectorForSimpleWrite.safe_vector.push_back(std::move(raw_vector_logs));
+            raw_vector_logs.clear();
+        }
+        SafeVectorForSimpleWrite.cv.notify_one();
+    }
+
+    {
+        std::unique_lock <std::mutex> lock(SafeVectorForSimpleWrite.mtx);
+        SafeVectorForSimpleWrite.is_done = true;
+    }
+
+    SafeVectorForSimpleWrite.cv.notify_all();
+}
+
+LogGenerator::~LogGenerator() {}
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\loggenerator.h ---
+
+#ifndef LOGGENERATOR_H
+#define LOGGENERATOR_H
+
+#include <mutex>
+#include <string>
+#include <vector>
+#include <ctime>
+#include <cstdlib>
+#include <utility>
+
+#include "safebuffer.h"
+
+class LogGenerator
+{
+private:
+    std::vector <std::string> warning_list =
+        {
+            "INFO", "WARNING", "ERROR", "DEBUG", "FATAL", "TRACE", "ALERT", "NOTICE"
+        };
+    std::vector <std::string> comment_list =
+        {
+            "РЎРµСЂРІРµСЂ СѓСЃРїРµС€РЅРѕ Р·Р°РїСѓС‰РµРЅ РЅР° РїРѕСЂС‚Сѓ 8080", "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ admin Р°РІС‚РѕСЂРёР·РѕРІР°Р»СЃСЏ РІ СЃРёСЃС‚РµРјРµ", "Р—Р°РІРµСЂС€РµРЅРѕ РїР»Р°РЅРѕРІРѕРµ СЂРµР·РµСЂРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ РґР°РЅРЅС‹С…",
+            "РЎРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ РЅР° РґРёСЃРєРµ РјРµРЅРµРµ 15%", "SSL СЃРµСЂС‚РёС„РёРєР°С‚ РёСЃС‚РµРєР°РµС‚ С‡РµСЂРµР· 7 РґРЅРµР№", "РњРµРґР»РµРЅРЅС‹Р№ РѕС‚РІРµС‚ РѕС‚ Р±Р°Р·С‹ РґР°РЅРЅС‹С… (3.2 СЃРµРє)",
+            "РќРµ СѓРґР°Р»РѕСЃСЊ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє Р±Р°Р·Рµ РґР°РЅРЅС‹С…: timeout", "Р¤Р°Р№Р» РєРѕРЅС„РёРіСѓСЂР°С†РёРё РЅРµ РЅР°Р№РґРµРЅ РїРѕ РїСѓС‚Рё /etc/app/config.json", "РџСЂРµРІС‹С€РµРЅР° РєРІРѕС‚Р° РїР°РјСЏС‚Рё РґР»СЏ РїСЂРѕС†РµСЃСЃР° (Р»РёРјРёС‚ 2 Р“Р‘)",
+            "Р—Р°РїСЂРѕСЃ: GET /api/v1/users/123", "РћС‚РІРµС‚: РєРѕРґ 200, С‚РµР»Рѕ РѕС‚РІРµС‚Р° 1456 Р±Р°Р№С‚", "РљСЌС€ РѕС‡РёС‰РµРЅ, РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ: 42",
+            "РќРµРІРѕСЃСЃС‚Р°РЅРѕРІРёРјР°СЏ РѕС€РёР±РєР° СЏРґСЂР°: segmentation fault", "РђРІР°СЂРёР№РЅРѕРµ Р·Р°РІРµСЂС€РµРЅРёРµ: С‚Р°Р№РјР°СѓС‚ watchdog", "РљСЂРёС‚РёС‡РµСЃРєР°СЏ СѓС‚РµС‡РєР° РїР°РјСЏС‚Рё: РїРѕС‚СЂРµР±Р»РµРЅРёРµ РїСЂРµРІС‹СЃРёР»Рѕ 90%",
+            "Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРё calculatePrice СЃ Р°СЂРіСѓРјРµРЅС‚Р°РјРё (100, 'USD')", "Р’С‹С…РѕРґ РёР· С„СѓРЅРєС†РёРё calculatePrice, СЂРµР·СѓР»СЊС‚Р°С‚: 8500", "Р’С…РѕРґ РІ С†РёРєР» СЂРµРЅРґРµСЂРёРЅРіР°, РёС‚РµСЂР°С†РёСЏ 42",
+            "РћР±РЅР°СЂСѓР¶РµРЅРѕ РїРѕРґРѕР·СЂРёС‚РµР»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїСЂРѕСЃРѕРІ РѕС‚ IP 192.168.1.100", "РџРѕРїС‹С‚РєР° РЅРµСЃР°РЅРєС†РёРѕРЅРёСЂРѕРІР°РЅРЅРѕРіРѕ РґРѕСЃС‚СѓРїР° Рє РїР°РЅРµР»Рё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°", "РЎР»СѓР¶Р±Р° РјРѕРЅРёС‚РѕСЂРёРЅРіР° РЅРµ РѕС‚РІРµС‡Р°РµС‚ РІ С‚РµС‡РµРЅРёРµ 5 РјРёРЅСѓС‚",
+            "РЈСЃС‚Р°РЅРѕРІР»РµРЅРѕ РЅРѕРІРѕРµ РїРѕРґРєР»СЋС‡РµРЅРёРµ РѕС‚ РєР»РёРµРЅС‚Р° 10.0.0.45", "РћС‡РµСЂРµРґСЊ Р·Р°РґР°С‡ РїСѓСЃС‚Р°, СЃРёСЃС‚РµРјР° РїРµСЂРµС…РѕРґРёС‚ РІ СЂРµР¶РёРј РѕР¶РёРґР°РЅРёСЏ", "РЎРјРµРЅР° РІСЂРµРјРµРЅРЅРѕРіРѕ СЃР»РѕС‚Р°: РґРµРЅСЊ, Р°РєС‚РёРІРµРЅ РѕСЃРЅРѕРІРЅРѕР№ СЃРµСЂРІРµСЂ"
+        };
+
+public:
+    LogGenerator();
+
+    std::string generateSupporter(const std::string& log_type, const std::string& comment);
+
+    void generate(int log_count, SafeBuffer& SafeVectorForSimpleWrite);
+};
+
+#endif // LOGGENERATOR_H
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\main.cpp ---
+
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+
+int main(int argc, char *argv[])
+{
+    QGuiApplication app(argc, argv);
+
+    QQmlApplicationEngine engine;
+    QObject::connect(
+        &engine,
+        &QQmlApplicationEngine::objectCreationFailed,
+        &app,
+        []() { QCoreApplication::exit(-1); },
+        Qt::QueuedConnection);
+    engine.loadFromModule("MultithreadedParserForGeneratedLogs", "Main");
+
+    return QGuiApplication::exec();
+}
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\maincontroller.cpp ---
+
+#include "maincontroller.h"
+
+Q_INVOKABLE void MainController::initialization(size_t log_count)
+{
+    this->log_count = log_count;
+}
+
+Q_INVOKABLE void MainController::start_threads()
+{
+    std::thread lgeneratorThread(&LogGenerator::generate, &LGenerator, log_count, std::ref(SafeVectorForSimpleWriter));
+    std::thread plogsThread(&ParseLogs::parse, &PLogs, std::ref(SafeVectorForSimpleWriter), std::ref(log_vector), std::ref(SafeVectorForParse));
+    std::thread rlwriterThread(&RawLogsWriter::write, &RLWriter, std::ref(SafeVectorForParse), std::ref(SafeVectorForSimpleWriter));
+    std::thread plwriterThread(&ParsedLogWriter::write, &PLWriter, std::ref(log_vector));
+
+    lgeneratorThread.join();
+    plwriterThread.join();
+    plogsThread.join();
+    rlwriterThread.join();
+}
+
+Q_INVOKABLE void MainController::stop_threads()
+{
+
+}
+
+Q_INVOKABLE void reset_threads()
+{
+
+}
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\maincontroller.h ---
+
+#ifndef MAINCONTROLLER_H
+#define MAINCONTROLLER_H
+
+#include <thread>
+
+#include <QObject>
+#include <QtQml/qqmlregistration.h>
+
+#include "loggenerator.h"
+#include "parsedlogswriter.h"
+#include "parselogs.h"
+#include "rawlogswriter.h"
+
+class MainController : public QObject
+{
+private:
+    Q_OBJECT
+    QML_ELEMENT
+
+    size_t log_count = 0;
+    bool is_done = false;
+
+    SafeLogMap log_vector;
+    std::mutex log_vector_mtx;
+    std::condition_variable log_vector_cv;
+
+    SafeBuffer SafeVectorForSimpleWriter;
+    SafeBuffer SafeVectorForParse;
+
+    LogGenerator LGenerator;
+    ParseLogs PLogs;
+    RawLogsWriter RLWriter;
+    ParsedLogWriter PLWriter;
+public:
+    explicit MainController(QObject *parent = nullptr): QObject(parent) {}
+
+    Q_INVOKABLE void initialization(size_t log_count);
+
+    Q_INVOKABLE void start_threads();
+
+    Q_INVOKABLE void stop_threads();
+
+    Q_INVOKABLE void reset_threads();
+};
+
+#endif // MAINCONTROLLER_H
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\parsedlogswriter.cpp ---
+
+#include "parsedlogswriter.h"
+
+void ParsedLogWriter::write(SafeLogMap& log_vector)
+{
+    if (std::filesystem::exists("ParsedLogs.txt")) std::filesystem::remove("ParsedLogs.txt");
+    while (true)
+    {
+        {
+            std::unique_lock<std::mutex> lock(log_vector.mtx);
+            log_vector.cv.wait(lock, [&]() {return !log_vector.data.empty() || log_vector.is_done; });
+            if (log_vector.data.empty() && log_vector.is_done)
+            {
+                break;
+            }
+            current_log_vector = std::move(log_vector.data);
+            log_vector.cv.notify_one();
+        }
+
+        std::ofstream parsedLogWriter("ParsedLogs.txt", std::ios::app);
+        if (!parsedLogWriter.is_open()) return;
+        for (const auto& [lvl, info] : current_log_vector)
+        {
+            int counterI = 1;
+            parsedLogWriter << "\nРЈСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ: " << lvl;
+            parsedLogWriter << "\n\tРРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅРµРј:";
+            parsedLogWriter << "\n\t[ ] РЎРєРѕР»СЊРєРѕ СЂР°Р· РІСЃС‚СЂРµС‚РёР»СЃСЏ СЌС‚РѕС‚ СѓСЂРѕРІРµРЅСЊ: " << info.count;
+
+            parsedLogWriter << "\n\t[ ] РљР°РєРёРµ РєРѕРјРјРµРЅС‚Р°СЂРёРё СЃРѕРґРµСЂР¶РёС‚:";
+            for (const auto& [comment, count] : info.logCommentCount)
+            {
+                parsedLogWriter << "\n\t\t" << counterI++ << ")" << "РљРѕРјРјРµРЅС‚Р°СЂРёР№: " << comment;
+                parsedLogWriter << "\n\t\tРЎРєРѕР»СЊРєРѕ СЂР°Р· РІСЃС‚СЂРµС‚РёР»СЃСЏ СЌС‚РѕС‚ РєРѕРјРјРµРЅС‚Р°СЂРёР№: " << count;
+
+                const std::vector<LogDateTime>& keyDateTime = info.logCommentDateTime.at(comment);
+
+                for (int i = 0; i < keyDateTime.size(); i++)
+                {
+                    parsedLogWriter << "\n\t\tР”Р°С‚С‹ РІ РєРѕС‚РѕСЂС‹Рµ РїРѕСЏРІРёР»СЃСЏ РєРѕРјРјРµРЅС‚Р°СЂРёР№: " << keyDateTime[i].date << " " << keyDateTime[i].time;
+                }
+                parsedLogWriter << "\n";
+            }
+        }
+        current_log_vector.clear();
+    }
+}
+
+ParsedLogWriter::~ParsedLogWriter() {}
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\parsedlogswriter.h ---
+
+#ifndef PARSEDLOGSWRITER_H
+#define PARSEDLOGSWRITER_H
+
+#include <filesystem>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <unordered_map>
+#include <cstdlib>
+
+#include "safebuffer.h"
+
+class ParsedLogWriter
+{
+private:
+    std::unordered_map<std::string, logInfo> current_log_vector;
+public:
+    void write(SafeLogMap& log_vector);
+};
+
+#endif // PARSEDLOGSWRITER_H
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\parselogs.cpp ---
+
+#include "parselogs.h"
+
+void ParseLogs::parse(SafeBuffer& SafeVectorForParsedWriter, SafeLogMap& log_vector, SafeBuffer& SafeVectorForParse)
+{
+    while (true)
+    {
+        {
+            std::unique_lock<std::mutex> lock(SafeVectorForParse.mtx);
+            SafeVectorForParse.cv.wait(lock, [&]() {return !SafeVectorForParse.safe_vector.empty() || SafeVectorForParse.is_done; });
+            if (SafeVectorForParse.safe_vector.empty() && SafeVectorForParse.is_done)
+            {
+                break;
+            }
+            currentSafeVector.safe_vector = std::move(SafeVectorForParse.safe_vector);
+        }
+
+        for (std::vector<std::string>& vector : currentSafeVector.safe_vector)
+        {
+            for (std::string& inputString : vector)
+            {
+                size_t pos1 = inputString.find("[");
+                size_t pos2 = inputString.find("]");
+
+                std::string newInputStringDate = "";
+                if (pos1 == std::string::npos || pos2 == std::string::npos) continue;
+                newInputStringDate = inputString.substr(pos1, pos2 - pos1 + 1);
+
+                size_t pos3 = inputString.find("[", pos2);
+                size_t pos4 = inputString.find("]", pos3);
+
+                std::string newInputStringTime = "";
+                if (pos3 == std::string::npos || pos4 == std::string::npos) continue;
+                newInputStringTime = inputString.substr(pos3, pos4 - pos3 + 1);
+
+                size_t pos5 = inputString.find("[", pos4);
+                size_t pos6 = inputString.find("]", pos5);
+
+                std::string newInputStringLvl = "";
+                if (pos5 == std::string::npos || pos6 == std::string::npos) continue;
+                newInputStringLvl = inputString.substr(pos5, pos6 - pos5 + 1);
+
+                std::string newInputStringComment = "";
+                if (pos6 + 1 == std::string::npos || pos6 + 1 >= inputString.size()) continue;
+                newInputStringComment = inputString.substr(pos6 + 1);
+
+                logInfo& info = current_log_vector.data[newInputStringLvl];
+
+                info.count++;
+                info.logCommentCount[newInputStringComment]++;
+                info.logCommentDateTime[newInputStringComment].push_back({ newInputStringDate, newInputStringTime });
+            }
+        }
+
+        {
+            std::unique_lock<std::mutex> lock(log_vector.mtx);
+            log_vector.cv.wait(lock, [&]() {return log_vector.data.empty();});
+            log_vector.data = std::move(current_log_vector.data);
+            log_vector.cv.notify_one();
+        }
+    }
+
+    std::lock_guard<std::mutex> lock(log_vector.mtx);
+    log_vector.is_done = true;
+    log_vector.cv.notify_one();
+}
+
+ParseLogs::~ParseLogs() {}
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\parselogs.h ---
+
+#ifndef PARSELOGS_H
+#define PARSELOGS_H
+
+#include <mutex>
+#include <ctime>
+#include <cstdlib>
+#include <utility>
+
+#include "safebuffer.h"
+
+class ParseLogs
+{
+private:
+    SafeBuffer currentSafeVector;
+    SafeLogMap current_log_vector;
+public:
+    void parse(SafeBuffer& SafeVectorForParsedWriter, SafeLogMap& log_vector, SafeBuffer& SafeVectorForParse);
+};
+
+#endif // PARSELOGS_H
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\rawlogswriter.cpp ---
+
+#include "rawlogswriter.h"
+
+void RawLogsWriter::write(SafeBuffer& SafeVectorForParse, SafeBuffer& SafeVectorForSimpleWriter)
+{
+    if (std::filesystem::exists("RawLogs.txt")) std::filesystem::remove("RawLogs.txt");
+    std::ofstream rawLogWriter("RawLogs.txt", std::ios::app);
+    if (!rawLogWriter.is_open()) return;
+    while (true)
+    {
+        {
+            std::unique_lock<std::mutex> lock(SafeVectorForSimpleWriter.mtx);
+
+            SafeVectorForSimpleWriter.cv.wait(lock, [&]() { return !SafeVectorForSimpleWriter.safe_vector.empty() || SafeVectorForSimpleWriter.is_done; });
+            if (SafeVectorForSimpleWriter.safe_vector.empty() && SafeVectorForSimpleWriter.is_done)
+            {
+                break;
+            }
+            currentSafeVector.safe_vector = std::move(SafeVectorForSimpleWriter.safe_vector);
+        }
+
+        for (std::vector<std::string>& vector : currentSafeVector.safe_vector)
+        {
+            for (std::string& string : vector)
+            {
+                rawLogWriter << string;
+            }
+        }
+
+        {
+            std::unique_lock<std::mutex> lock(SafeVectorForParse.mtx);
+            SafeVectorForParse.cv.wait(lock, [&]() {return SafeVectorForParse.safe_vector.empty(); });
+            SafeVectorForParse.safe_vector = std::move(currentSafeVector.safe_vector);
+            SafeVectorForParse.cv.notify_one();
+        }
+
+        if (SafeVectorForSimpleWriter.is_done && SafeVectorForSimpleWriter.safe_vector.empty())
+        {
+            std::lock_guard<std::mutex> lock(SafeVectorForParse.mtx);
+            SafeVectorForParse.is_done = true;
+            SafeVectorForParse.cv.notify_one();
+        }
+    }
+}
+
+RawLogsWriter::~RawLogsWriter() {}
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\rawlogswriter.h ---
+
+#ifndef RAWLOGSWRITER_H
+#define RAWLOGSWRITER_H
+
+#include <utility>
+#include <mutex>
+#include <filesystem>
+#include <fstream>
+
+#include "safebuffer.h"
+
+class RawLogsWriter
+{
+private:
+    SafeBuffer currentSafeVector;
+public:
+    void write(SafeBuffer& SafeVectorForParse, SafeBuffer& SafeVectorForSimpleWriter);
+};
+
+#endif // RAWLOGSWRITER_H
+
+--- FILE: C:\projects\Qt\MultithreadedParserForGeneratedLogs\safebuffer.h ---
+
+#ifndef SAFEBUFFER_H
+#define SAFEBUFFER_H
+
+#include <mutex>
+#include <vector>
+#include <string>
+#include <condition_variable>
+#include <unordered_map>
+
+struct SafeBuffer
+{
+    std::mutex mtx;
+    std::condition_variable cv;
+    std::vector<std::vector<std::string>> safe_vector;
+    bool is_done = false;
+};
+
+struct LogDateTime
+{
+    std::string date;
+    std::string time;
+};
+
+struct logInfo
+{
+    int count = 0;
+    std::unordered_map <std::string, int> logCommentCount;
+    std::unordered_map <std::string, std::vector<LogDateTime>> logCommentDateTime;
+};
+
+struct SafeLogMap
+{
+    std::mutex mtx;
+    std::condition_variable cv;
+    bool is_done = false;
+    std::unordered_map<std::string, logInfo> data;
+};
+
+#endif // SAFEBUFFER_H

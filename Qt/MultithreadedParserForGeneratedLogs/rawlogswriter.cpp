@@ -41,5 +41,3 @@ void RawLogsWriter::write(SafeBuffer& SafeVectorForParse, SafeBuffer& SafeVector
         }
     }
 }
-
-RawLogsWriter::~RawLogsWriter() {}

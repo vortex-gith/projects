@@ -31,6 +31,11 @@ private:
     ParseLogs PLogs;
     RawLogsWriter RLWriter;
     ParsedLogWriter PLWriter;
+
+    std::thread lgeneratorThread;
+    std::thread plogsThread;
+    std::thread rlwriterThread;
+    std::thread plwriterThread;
 public:
     explicit MainController(QObject *parent = nullptr): QObject(parent) {}
 
@@ -41,6 +46,8 @@ public:
     Q_INVOKABLE void stop_threads();
 
     Q_INVOKABLE void reset_threads();
+
+    ~MainController();
 };
 
 #endif // MAINCONTROLLER_H
