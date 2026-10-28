@@ -4,6 +4,7 @@
 #include <thread>
 
 #include <QObject>
+#include <QTimer>
 #include <QtQml/qqmlregistration.h>
 
 #include "loggenerator.h"
@@ -16,6 +17,7 @@ class MainController : public QObject
 private:
     Q_OBJECT
     QML_ELEMENT
+    Q_PROPERTY(bool isDone READ getIsDone NOTIFY isDoneChanged FINAL)
 
     size_t log_count = 0;
     bool is_done = false;
@@ -36,6 +38,10 @@ private:
     std::thread plogsThread;
     std::thread rlwriterThread;
     std::thread plwriterThread;
+
+    QTimer uiTimer;
+signals:
+    void isDoneChanged();
 public:
     explicit MainController(QObject *parent = nullptr): QObject(parent) {}
 
@@ -46,6 +52,8 @@ public:
     Q_INVOKABLE void stop_threads();
 
     Q_INVOKABLE void reset_threads();
+
+    Q_INVOKABLE bool getIsDone() const;
 
     ~MainController();
 };
