@@ -18,6 +18,7 @@ private:
     Q_OBJECT
     QML_ELEMENT
     Q_PROPERTY(bool isDone READ getIsDone NOTIFY isDoneChanged FINAL)
+    Q_PROPERTY(int processedLogs READ getProcessedLogs NOTIFY processedLogsChanged FINAL)
 
     size_t log_count = 0;
     bool is_done = false;
@@ -42,8 +43,10 @@ private:
     QTimer uiTimer;
 signals:
     void isDoneChanged();
+private slots:
+    void onUiUpdate();
 public:
-    explicit MainController(QObject *parent = nullptr): QObject(parent) {}
+    explicit MainController(QObject *parent = nullptr);
 
     Q_INVOKABLE void initialization(size_t log_count);
 
@@ -53,7 +56,7 @@ public:
 
     Q_INVOKABLE void reset_threads();
 
-    Q_INVOKABLE bool getIsDone() const;
+    bool getIsDone() const;
 
     ~MainController();
 };
